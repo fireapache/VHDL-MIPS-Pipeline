@@ -12,7 +12,7 @@ end MIPS;
 architecture rtl of MIPS is
 	signal sig_OUT_PCP4_2, sig_OUT_jump, sig_OUT_memI_1, sig_inst, sig_regData, sig_dadoLido1, sig_dadoLido2,
 	sig_imediate_ext, sig_dadoLido1_1,sig_dadoLido2_1, sig_imediate_ext_1, sig_somInPC,
-	sig_IN1_ULA,sig_IN2_ULA, sig_ULA_result, sig_OUT_PCP4_3, sig_in_PC, sig_out_PC,
+	sig_IN1_ULA ,sig_IN2_ULA , sig_ULA_result, sig_OUT_PCP4_3, sig_in_PC, sig_out_PC,
 	sig_OUT_jump_1, sig_ULA_result_1, sig_dadoLido2_2, sig_OUT_memD, 
 	sig_OUT_memD_1, sig_ULA_result_2, sig_OUT_PCP4_1: std_logic_vector(31 downto 0);
 	signal in_PIPE1, out_PIPE1: std_logic_vector(63 downto 0);
@@ -143,8 +143,8 @@ architecture rtl of MIPS is
 		PORT (
 		opcode : IN std_logic_vector(5 downto 0);
 		ulaOp : out std_logic_vector(1 downto 0);
-		RegDst, escMem, lerMem, DvC, memParaReg, escReg: out std_logic
-	   adiantaA,adiantaB : out std_logic_vector(1 downto 0); 
+		RegDst, escMem, lerMem, DvC, memParaReg, escReg: out std_logic;
+	   adiantaA,adiantaB : out std_logic_vector(1 downto 0)
 	);
 	END component;
 	
@@ -321,7 +321,7 @@ begin
 
 ------------------------------------------------------------------------------------	
 	
-	mux_IN_ULA_4_0: mux4to1 GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
+	mux_IN_ULA_4_1: mux4to1 GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
 		sel => sig_adiantaA1 ,
 		A => sig_dadoLido1_1 , -- PRIMEIRA SAIDA DO BANCO DE REGISTRADORES
 		B => sig_ULA_result_1, -- SEGUNDA EH A REDIRECAO DA SAIDA DA ULA POS FLIP FLOP
@@ -330,13 +330,13 @@ begin
 		X => sig_IN1_ULA -- PRIMEIRA ENTRADA DE ULA
 	);
 ------------------------------------------------------------------------------------	
-	mux_IN_ULA_4_0: mux4to1 GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
+	mux_IN_ULA_4_2: mux4to1 GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
 		sel => sig_adiantaB1  ,
 		A => sig_dadoLido2_1  ,
 		B => sig_ULA_result_1 , -- SEGUNDA EH A REDIRECAO DA SAIDA DA ULA POS FLIP FLOP
 		C => sig_regData , -- TERCEIRA EH A REDIRECAO DA SAIDA DEPOIS DO MULTIPLEXADOR
 		D => sig_somInPC , -- IMEDIATO POS FLIP FLOP
-		X => sig_IN1_ULA -- SEGUNDA ENTRADA DE ULA
+		X => sig_IN2_ULA -- SEGUNDA ENTRADA DE ULA
 		);
 ------------------------------------------------------------------------------------
 	operaULA: opULA PORT MAP (
@@ -346,7 +346,7 @@ begin
 	);
 
 	ULA1: ULA PORT MAP (
-		in0 => sig_IN1_ULA --sig_dadoLido1_1, -- modificado para outro sinal , guardar sinal de saido do banco de register
+		in0 => sig_IN1_ULA, --sig_dadoLido1_1, -- modificado para outro sinal , guardar sinal de saido do banco de register
 		in1 => sig_IN2_ULA,
 		oper => sig_operULA,
 		zero => sig_ULA_zero,
