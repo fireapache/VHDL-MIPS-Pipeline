@@ -144,7 +144,8 @@ architecture rtl of MIPS is
 		opcode : IN std_logic_vector(5 downto 0);
 		ulaOp : out std_logic_vector(1 downto 0);
 		RegDst, escMem, lerMem, DvC, memParaReg, escReg: out std_logic;
-	   adiantaA,adiantaB : out std_logic_vector(1 downto 0)
+		reg1,reg2,reg3 : in std_logic_vector(4 downto 0);
+	   adiantaA,adiantaB :out std_logic_vector(1 downto 0)
 	);
 	END component;
 	
@@ -244,6 +245,9 @@ begin
 		DvC => sig_DvC,
 		memParaReg => sig_memParaReg,
 		escReg => sig_escReg,
+		reg1 => sig_regDest, -- registrador destino
+		reg2 => sig_ReadReg1,-- registrador dado lido 1
+		reg3 => sig_ReadReg2,-- registrador dado lido 2
 		adiantaA =>sig_adiantaA,
 		adiantaB =>sig_adiantaB
 	);
@@ -324,18 +328,18 @@ begin
 	mux_IN_ULA_4_1: mux4to1 GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
 		sel => sig_adiantaA1 ,
 		A => sig_dadoLido1_1 , -- PRIMEIRA SAIDA DO BANCO DE REGISTRADORES
-		B => sig_ULA_result_1, -- SEGUNDA EH A REDIRECAO DA SAIDA DA ULA POS FLIP FLOP
-		C => sig_regData , -- TERCEIRA EH A REDIRECAO DA SAIDA DEPOIS DO MULTIPLEXADOR
+		B => sig_regData , --  EH A REDIRACAO DA SAIDA DEPOIS DO MULTIPLEXADOR
+		C => sig_ULA_result_1 ,-- RESULTADO POS ULA 
 		D =>"00000000000000000000000000000000",
 		X => sig_IN1_ULA -- PRIMEIRA ENTRADA DE ULA
 	);
 ------------------------------------------------------------------------------------	
 	mux_IN_ULA_4_2: mux4to1 GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
 		sel => sig_adiantaB1  ,
-		A => sig_dadoLido2_1  ,
-		B => sig_ULA_result_1 , -- SEGUNDA EH A REDIRECAO DA SAIDA DA ULA POS FLIP FLOP
-		C => sig_regData , -- TERCEIRA EH A REDIRECAO DA SAIDA DEPOIS DO MULTIPLEXADOR
-		D => sig_somInPC , -- IMEDIATO POS FLIP FLOP
+		A => sig_dadoLido2_1  ,-- SEGUNDA SAIDA DO BANCO DE REGISTRADORES
+		B => sig_regData, --  REDIRAÇAO DO ULTIMO MULTIPLEX
+		C => sig_ULA_result_1  ,  -- RESULTADO POS ULA
+		D => sig_somInPC ,  -- SAIDA DO IMEDIATO
 		X => sig_IN2_ULA -- SEGUNDA ENTRADA DE ULA
 		);
 ------------------------------------------------------------------------------------
