@@ -37,8 +37,8 @@ end COMPONENT;
 component geradordesinais
 	port(
 		opcode : in std_logic_vector(5 downto 0);
-		sinal1,sinal2,sinal3,sinal4: in std_logic
-		AdiantaA,AdiantaB:out std_logic_vector(1 downto 0);
+		sinal1,sinal2,sinal3,sinal4: in std_logic;
+		AdiantaA,AdiantaB:out std_logic_vector(1 downto 0)
 	);
 end component;
 
