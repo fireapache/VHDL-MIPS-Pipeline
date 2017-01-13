@@ -24,8 +24,8 @@ signal combination0,combination1 : std_logic_vector(1 downto 0);
 -- sinal3 = true , reg2 = rs1
 -- sinal4 = true , reg3 = rs1
 
-COMPONENT comparador  
-	port(
+COMPONENT comparador  -- ele pega o resultado da comparação entre tres registradores e gera 4 sinais.
+	port(	-- que indicam a 
 		  clk : in std_logic;
 		  rst:in std_logic;	
 		  reg1,reg2,reg3 : in std_logic_vector(4 downto 0);
@@ -34,7 +34,7 @@ COMPONENT comparador
 	
 end COMPONENT;
 
-component geradordesinais
+component geradordesinais -- pega 4 sinais , e o opcode e gera os sinais de controle dos dois multiplexadores
 	port(
 		opcode : in std_logic_vector(5 downto 0);
 		sinal1,sinal2,sinal3,sinal4: in std_logic;
