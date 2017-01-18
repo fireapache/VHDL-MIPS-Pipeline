@@ -24,9 +24,6 @@ vcom -93 -work work {../../memInst2.vhd}
 vcom -93 -work work {../../memData.vhd}
 vcom -93 -work work {../../mux32to1.vhd}
 vcom -93 -work work {../../regBank.vhd}
-vcom -93 -work work {../../mux4to1.vhd}
-vcom -93 -work work {../../comparador.vhd}
-vcom -93 -work work {../../geradordesinais.vhd}
 
 vcom -93 -work work {MIPS.vht}
 
@@ -34,7 +31,7 @@ vcom -93 -work work {MIPS.vht}
 
 vsim +altera -do MIPS_run_msim_rtl_vhdl.do -l msim_transcript -gui work.mips_vhd_tst 
 
---mem load -format hex -infile memInst.hex /mips_vhd_tst/i1/memI/memory
+mem load -format hex -infile memInst.hex /mips_vhd_tst/i1/memI/memory
 
 do wave.do
 

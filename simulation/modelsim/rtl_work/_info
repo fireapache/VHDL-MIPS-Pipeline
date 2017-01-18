@@ -1,600 +1,794 @@
 m255
-K3
+K4
+z2
 13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
 cModel Technology
-Z0 dC:\Users\Huberto\Documents\GitHub\VHDL-MIPS-Pipeline\simulation\modelsim
+Z0 d/home/lucas/Downloads/Mips fisico/MIPS/simulation/modelsim
 Eaddsub
-Z1 w1433948630
-Z2 DPx4 ieee 16 std_logic_signed 0 22 E>OLoMaBGQ?hbGgOoNXM^1
-Z3 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
-Z4 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
-Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z7 dC:\Users\Huberto\Documents\GitHub\VHDL-MIPS-Pipeline\simulation\modelsim
-Z8 8C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/addSub.vhd
-Z9 FC:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/addSub.vhd
+Z1 w1477067772
+Z2 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z4 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z7 8/home/lucas/Downloads/Mips fisico/MIPS/addSub.vhd
+Z8 F/home/lucas/Downloads/Mips fisico/MIPS/addSub.vhd
 l0
 L10
-V6`7LhPYRQ=K_:CfXUNDIW1
-Z10 OV;C;10.1d;51
+VVcXS2IUQB<hBh5oYmDh^e2
+!s100 4b<bIeoNdEPgF:jJTAVFi2
+Z9 OV;C;10.3d;59
 31
-Z11 !s108 1435685874.536000
-Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/addSub.vhd|
-Z13 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/addSub.vhd|
-Z14 o-93 -work work -O0
-Z15 tExplicit 1
-!s100 LY?U878[=WVcWBUT=gEF71
+Z10 !s110 1484779146
 !i10b 1
+Z11 !s108 1484779146.883166
+Z12 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/addSub.vhd|
+Z13 !s107 /home/lucas/Downloads/Mips fisico/MIPS/addSub.vhd|
+!i113 1
+Z14 o-93 -work work
+Z15 tExplicit 1
 Artl
 R2
 R3
 R4
 R5
 R6
-DEx4 work 6 addsub 0 22 6`7LhPYRQ=K_:CfXUNDIW1
+DEx4 work 6 addsub 0 22 VcXS2IUQB<hBh5oYmDh^e2
 l24
 L23
-Vl[0oca]=jf6ll>SDXd>CN2
-R10
+VM`j=a=lg]7O0^G9>@AL>`1
+!s100 lbf3KedNfY4>JFd5BUk752
+R9
 31
+R10
+!i10b 1
 R11
 R12
 R13
+!i113 1
 R14
 R15
-!s100 `8K?D92[PlZK1F2je[SRA1
-!i10b 1
 Parray32
 R5
 R6
-Z16 w1426800378
-R7
-Z17 8C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/array32.vhd
-Z18 FC:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/array32.vhd
+R1
+R0
+Z16 8/home/lucas/Downloads/Mips fisico/MIPS/array32.vhd
+Z17 F/home/lucas/Downloads/Mips fisico/MIPS/array32.vhd
 l0
 L4
-VGT7iC8l<9A7JBVEH544N]0
-R10
+VfW5[EdUd<=T5VZ7UnN^SB0
+!s100 ?bhL`7Ii^Q>I>RGjjHgDl2
+R9
 31
-Z19 !s108 1435685874.329000
-Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/array32.vhd|
-Z21 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/array32.vhd|
+R10
+!i10b 1
+Z18 !s108 1484779146.759077
+Z19 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/array32.vhd|
+Z20 !s107 /home/lucas/Downloads/Mips fisico/MIPS/array32.vhd|
+!i113 1
 R14
 R15
-!s100 jO17gM:^h]Pk5GSCYFg7i0
-!i10b 1
 Bbody
-Z22 DPx4 work 7 array32 0 22 GT7iC8l<9A7JBVEH544N]0
+Z21 DPx4 work 7 array32 0 22 fW5[EdUd<=T5VZ7UnN^SB0
 R5
 R6
 l0
 L12
-V0Hg<C;fbcz?mk<`ml72hA3
-R10
+V[6R0gKXz4k=EE7`EYVMzE2
+!s100 N@GS`28mRW04CX5EfDAze3
+R9
 31
+R10
+!i10b 1
+R18
 R19
 R20
-R21
+!i113 1
 R14
 R15
 nbody
-!s100 nlAg6@keIRA4LnXS3A8mR2
-!i10b 1
-Econtroller
-Z23 w1434559299
-Z24 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Ecomparador
+Z22 w1484087194
+Z23 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 R3
 R5
 R6
-R7
-Z25 8C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/controller.vhd
-Z26 FC:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/controller.vhd
+R0
+Z24 8/home/lucas/Downloads/Mips fisico/MIPS/comparador.vhd
+Z25 F/home/lucas/Downloads/Mips fisico/MIPS/comparador.vhd
 l0
-L6
-Vf3Z>Y@VXVAhOZ_Eaa16>l3
-R10
+L15
+V=KZfIgTeckbE91WB4>2<P1
+!s100 5gn3VoNfOW[DAQLUWioTQ0
+R9
 31
-Z27 !s108 1435685875.012000
-Z28 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/controller.vhd|
-Z29 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/controller.vhd|
+Z26 !s110 1484779147
+!i10b 1
+Z27 !s108 1484779147.652219
+Z28 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/comparador.vhd|
+Z29 !s107 /home/lucas/Downloads/Mips fisico/MIPS/comparador.vhd|
+!i113 1
 R14
 R15
-!s100 oecDgcSODTb3K?8b6bhc[3
-!i10b 1
-Artl
-R24
+Abehavior
+R23
 R3
 R5
 R6
-DEx4 work 10 controller 0 22 f3Z>Y@VXVAhOZ_Eaa16>l3
-l15
-L14
-V^P^F?<44SC8nOb=?H_UHU2
-R10
+DEx4 work 10 comparador 0 22 =KZfIgTeckbE91WB4>2<P1
+l38
+L24
+Vm9mHCbi1z9mJG?`Vfzb>?1
+!s100 B2RM`ZkZY>VmhiC8AZUSR1
+R9
 31
+R26
+!i10b 1
 R27
 R28
 R29
+!i113 1
 R14
 R15
-!s100 OCfS1L:PNngMXBHN]KOTS0
-!i10b 1
-Edec5to1
-Z30 w1433957853
+Econtroller
+Z30 w1484087091
+R23
+R3
 R5
 R6
-R7
-Z31 8C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/dec5p1.vhd
-Z32 FC:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/dec5p1.vhd
+R0
+Z31 8/home/lucas/Downloads/Mips fisico/MIPS/controller.vhd
+Z32 F/home/lucas/Downloads/Mips fisico/MIPS/controller.vhd
 l0
-L4
-VKmd0JBLEQ6k?41EJL]Dh70
-R10
+L6
+VSZZY4eCOm@_EhAa]E]Mm11
+!s100 CO7o@:Wh`c3bEGjck<jN>2
+R9
 31
-Z33 !s108 1435685874.187000
-Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/dec5p1.vhd|
-Z35 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/dec5p1.vhd|
+R26
+!i10b 1
+Z33 !s108 1484779147.161724
+Z34 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/controller.vhd|
+Z35 !s107 /home/lucas/Downloads/Mips fisico/MIPS/controller.vhd|
+!i113 1
 R14
 R15
-!s100 EAK=cim[;18ga4Bz=<;3J0
-!i10b 1
 Artl
+R23
+R3
 R5
 R6
-DEx4 work 7 dec5to1 0 22 Kmd0JBLEQ6k?41EJL]Dh70
-l12
-L11
-V7TooWz9Q10PY??J8gOAYZ3
-R10
+DEx4 work 10 controller 0 22 SZZY4eCOm@_EhAa]E]Mm11
+l47
+L18
+VLk04z=fa]Ybol4=]7DTCg0
+!s100 B=3P9ICVNU=303]9Omo472
+R9
 31
+R26
+!i10b 1
 R33
 R34
 R35
+!i113 1
 R14
 R15
-!s100 ?olAI4hnl]X>lc5CQJ>A@3
-!i10b 1
-Eflipflop
-Z36 w1433981874
+Edec5to1
+Z36 w1477067774
 R5
 R6
-R7
-Z37 8C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/flipflop.vhd
-Z38 FC:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/flipflop.vhd
+R0
+Z37 8/home/lucas/Downloads/Mips fisico/MIPS/dec5p1.vhd
+Z38 F/home/lucas/Downloads/Mips fisico/MIPS/dec5p1.vhd
 l0
 L4
-VGAJ@ZN7<:9@mhCX7fz6R81
-R10
+VYbNLlNzIBH4Mi<f8LzJ7e1
+!s100 F;z:jZI3YR]F`7BOdOWDb1
+R9
 31
-Z39 !s108 1435685875.108000
-Z40 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/flipflop.vhd|
-Z41 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/flipflop.vhd|
+R10
+!i10b 1
+Z39 !s108 1484779146.697476
+Z40 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/dec5p1.vhd|
+Z41 !s107 /home/lucas/Downloads/Mips fisico/MIPS/dec5p1.vhd|
+!i113 1
 R14
 R15
-!s100 ?6[fgg=S<afi9H48ofzJo1
-!i10b 1
 Artl
 R5
 R6
-DEx4 work 8 flipflop 0 22 GAJ@ZN7<:9@mhCX7fz6R81
-l17
-L15
-Vdb=KDJ18LkFaYCoSdLCWz1
-R10
+DEx4 work 7 dec5to1 0 22 YbNLlNzIBH4Mi<f8LzJ7e1
+l12
+L11
+V1XWIb`;mE6?fYfPfSj7nb2
+!s100 Pd@ImFS2CdzL;6WCzdEfR0
+R9
 31
+R10
+!i10b 1
 R39
 R40
 R41
+!i113 1
 R14
 R15
-!s100 mB5d?5;C;kQn0AzK0FzeE2
-!i10b 1
-Ememdata
-Z42 w1434311790
+Eflipflop
+R36
 R5
 R6
-R7
-Z43 8C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memData.vhd
-Z44 FC:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memData.vhd
+R0
+Z42 8/home/lucas/Downloads/Mips fisico/MIPS/flipflop.vhd
+Z43 F/home/lucas/Downloads/Mips fisico/MIPS/flipflop.vhd
 l0
-L42
-Vk4]ND><m>Y6DJd3K1l1<=1
-R10
+L4
+V?A[Fh>92J[aKOk0Bd_7K]3
+!s100 6MlNQZ:A[fhYcCOJBXcbi1
+R9
 31
-Z45 !s108 1435685875.525000
-Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memData.vhd|
-Z47 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memData.vhd|
+R26
+!i10b 1
+Z44 !s108 1484779147.231499
+Z45 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/flipflop.vhd|
+Z46 !s107 /home/lucas/Downloads/Mips fisico/MIPS/flipflop.vhd|
+!i113 1
 R14
 R15
-!s100 B`fM31UUE]OoeHAbGb2Tm0
+Artl
+R5
+R6
+DEx4 work 8 flipflop 0 22 ?A[Fh>92J[aKOk0Bd_7K]3
+l17
+L15
+V7oUm^^mjFli4MYJi28`hz3
+!s100 XgP5SGQh6VSehmCoJ_]FP0
+R9
+31
+R26
 !i10b 1
+R44
+R45
+R46
+!i113 1
+R14
+R15
+Egeradordesinais
+Z47 w1484087605
+R23
+R3
+R5
+R6
+R0
+Z48 8/home/lucas/Downloads/Mips fisico/MIPS/geradordesinais.vhd
+Z49 F/home/lucas/Downloads/Mips fisico/MIPS/geradordesinais.vhd
+l0
+L7
+VH>Fd5SWhW02QX0l__S1Em2
+!s100 IIMdH]ZWBnX7OIN[PH2YL0
+R9
+31
+R26
+!i10b 1
+Z50 !s108 1484779147.722442
+Z51 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/geradordesinais.vhd|
+Z52 !s107 /home/lucas/Downloads/Mips fisico/MIPS/geradordesinais.vhd|
+!i113 1
+R14
+R15
+Abehavior
+R23
+R3
+R5
+R6
+DEx4 work 15 geradordesinais 0 22 H>Fd5SWhW02QX0l__S1Em2
+l20
+L18
+V78B7_;OVSnC[Cm<:@<5SP0
+!s100 z2QK`;<6;a@B@l8Ri3?h50
+R9
+31
+R26
+!i10b 1
+R50
+R51
+R52
+!i113 1
+R14
+R15
+Ememdata
+R36
+R5
+R6
+R0
+Z53 8/home/lucas/Downloads/Mips fisico/MIPS/memData.vhd
+Z54 F/home/lucas/Downloads/Mips fisico/MIPS/memData.vhd
+l0
+L42
+VU_9[cc_I[ebX:_^I?;Daf3
+!s100 __m6m0OD@AQ=l5@B5X`T32
+R9
+31
+R26
+!i10b 1
+Z55 !s108 1484779147.524223
+Z56 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/memData.vhd|
+Z57 !s107 /home/lucas/Downloads/Mips fisico/MIPS/memData.vhd|
+!i113 1
+R14
+R15
 Asyn
 R5
 R6
-DEx4 work 7 memdata 0 22 k4]ND><m>Y6DJd3K1l1<=1
+DEx4 work 7 memdata 0 22 U_9[cc_I[ebX:_^I?;Daf3
 l86
 L54
-V?e5d4<Z>5hzQ9I2@P_f>n0
-R10
+V@YgEb;^F[mlog2RK_?gId1
+!s100 ]ZiP4a^P994:4@zJ>?[C=1
+R9
 31
-R45
-R46
-R47
+R26
+!i10b 1
+R55
+R56
+R57
+!i113 1
 R14
 R15
-!s100 B=zA?IWUI:S868EnbM<eN0
-!i10b 1
 Ememinst2
-Z48 w1435685863
+R36
 R4
 R5
 R6
-R7
-Z49 8C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst2.vhd
-Z50 FC:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst2.vhd
+R0
+Z58 8/home/lucas/Downloads/Mips fisico/MIPS/memInst2.vhd
+Z59 F/home/lucas/Downloads/Mips fisico/MIPS/memInst2.vhd
 l0
 L5
-VdBQAd9M_=H`P`NWHX8Q4:0
-R10
+VZ5G^DVC6OP@FNj1;R]8=[0
+!s100 @<KnIV4F1J?1DI0MGP92h0
+R9
 31
-Z51 !s108 1435685874.073000
-Z52 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst2.vhd|
-Z53 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst2.vhd|
+R10
+!i10b 1
+Z60 !s108 1484779146.623843
+Z61 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/memInst2.vhd|
+Z62 !s107 /home/lucas/Downloads/Mips fisico/MIPS/memInst2.vhd|
+!i113 1
 R14
 R15
-!s100 _iHKRViB050j^_N=R_eA?2
-!i10b 1
 Arlt
 R4
 R5
 R6
-DEx4 work 8 meminst2 0 22 dBQAd9M_=H`P`NWHX8Q4:0
+DEx4 work 8 meminst2 0 22 Z5G^DVC6OP@FNj1;R]8=[0
 l22
 L18
-VKWBCLGDMeDa6KKN];=;kf3
-R10
+VOEDAJDnBhCIWTHBkaWZh51
+!s100 eHRO;EcFK3:fBiShc_deL3
+R9
 31
-R51
-R52
-R53
+R10
+!i10b 1
+R60
+R61
+R62
+!i113 1
 R14
 R15
-!s100 EoEFY2_lB=i_3Q`]DW_b`0
-!i10b 1
 Emips
-Z54 w1435683734
+Z63 w1484087133
 R6
 R5
 R4
-R7
-Z55 8C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/MIPS.vhd
-Z56 FC:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/MIPS.vhd
+R0
+Z64 8/home/lucas/Downloads/Mips fisico/MIPS/MIPS.vhd
+Z65 F/home/lucas/Downloads/Mips fisico/MIPS/MIPS.vhd
 l0
 L5
-V>f88<88ICoE4=DA`]H6Lh0
-R10
+VbYNDXaDY020QaZECbmHoX0
+!s100 :OjYzLb4O34LLPTkYRgi<3
+R9
 31
-Z57 !s108 1435685875.386000
-Z58 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/MIPS.vhd|
-Z59 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/MIPS.vhd|
+R26
+!i10b 1
+Z66 !s108 1484779147.445200
+Z67 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/MIPS.vhd|
+Z68 !s107 /home/lucas/Downloads/Mips fisico/MIPS/MIPS.vhd|
+!i113 1
 R14
 R15
-!s100 kUCF9e92IamQh;fbDd:4@3
-!i10b 1
 Artl
 R6
 R5
 R4
-DEx4 work 4 mips 0 22 >f88<88ICoE4=DA`]H6Lh0
-l163
+DEx4 work 4 mips 0 22 bYNDXaDY020QaZECbmHoX0
+l181
 L12
-VC:`>XUaHn@hE@e<BHIhk:1
-R10
+VQ:faeQ?HNoK0PV^1]hdmK0
+!s100 ]XiW[gm^dTc^?LgeVT]OU2
+R9
 31
-R57
-R58
-R59
+R26
+!i10b 1
+R66
+R67
+R68
+!i113 1
 R14
 R15
-!s100 zoeZm8KHXIHehEWF@Fz?d3
-!i10b 1
 Emux2to1
-Z60 w1434338980
+R36
 R5
 R6
-R7
-Z61 8C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux2to1.vhd
-Z62 FC:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux2to1.vhd
+R0
+Z69 8/home/lucas/Downloads/Mips fisico/MIPS/mux2to1.vhd
+Z70 F/home/lucas/Downloads/Mips fisico/MIPS/mux2to1.vhd
 l0
 L4
-VHWfiH?7fk:jHKRHQCXn[P2
-R10
+VmY=0e=kdE]8RBfUQXMdzE1
+!s100 2VHj[]0`e]VX<oLISmG7W0
+R9
 31
-Z63 !s108 1435685874.682000
-Z64 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux2to1.vhd|
-Z65 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux2to1.vhd|
+R10
+!i10b 1
+Z71 !s108 1484779146.962645
+Z72 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/mux2to1.vhd|
+Z73 !s107 /home/lucas/Downloads/Mips fisico/MIPS/mux2to1.vhd|
+!i113 1
 R14
 R15
-!s100 cWYjL`d_L3>0fho>jma6N2
-!i10b 1
 Abehavioral
 R5
 R6
-DEx4 work 7 mux2to1 0 22 HWfiH?7fk:jHKRHQCXn[P2
+DEx4 work 7 mux2to1 0 22 mY=0e=kdE]8RBfUQXMdzE1
 l16
 L15
-Ve^HYY_m`[F@L[>DYZ<Pl62
-R10
+V13DPYo96eBFcKVKF9;n_61
+!s100 H>caPXb527ld9^fEM3lAW1
+R9
 31
-R63
-R64
-R65
+R10
+!i10b 1
+R71
+R72
+R73
+!i113 1
 R14
 R15
-!s100 X=8SMo137kHXGa>DG3KFB2
-!i10b 1
 Emux32to1
-Z66 w1433951614
-R22
+R36
+R21
 R5
 R6
-R7
-Z67 8C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux32to1.vhd
-Z68 FC:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux32to1.vhd
+R0
+Z74 8/home/lucas/Downloads/Mips fisico/MIPS/mux32to1.vhd
+Z75 F/home/lucas/Downloads/Mips fisico/MIPS/mux32to1.vhd
 l0
 L5
-VaL4SI[zKL7ZaH?dJnIiC13
-R10
+Vh:JL6?M2eRd<8E6cCI5KG1
+!s100 _XESo`j:T0>FOORb1Db=Q2
+R9
 31
-Z69 !s108 1435685875.637000
-Z70 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux32to1.vhd|
-Z71 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux32to1.vhd|
+R26
+!i10b 1
+Z76 !s108 1484779147.793493
+Z77 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/mux32to1.vhd|
+Z78 !s107 /home/lucas/Downloads/Mips fisico/MIPS/mux32to1.vhd|
+!i113 1
 R14
 R15
-!s100 n1j@SYmQZH6CJ`]_m<Q_G3
-!i10b 1
 Artl
-R22
+R21
 R5
 R6
-DEx4 work 8 mux32to1 0 22 aL4SI[zKL7ZaH?dJnIiC13
+DEx4 work 8 mux32to1 0 22 h:JL6?M2eRd<8E6cCI5KG1
 l14
 L13
-VJikJ;ID4;LDTjL8REKShS0
-R10
+V4YDMheBB8bfKYDaY5nGHj1
+!s100 ?NU5?iXZ^_z;gUlQh]ePX0
+R9
 31
-R69
-R70
-R71
-R14
-R15
-!s100 mLP]j7HS4^>^@V?Kg`5Ma1
+R26
 !i10b 1
-Eopula
-Z72 w1435287181
-R24
-R3
-R5
-R6
-R7
-Z73 8C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/opULA.vhd
-Z74 FC:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/opULA.vhd
-l0
-L6
-V6STmjaYBS:NVD^lfdINem1
-R10
-31
-Z75 !s108 1435685875.293000
-Z76 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/opULA.vhd|
-Z77 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/opULA.vhd|
-R14
-R15
-!s100 i<ON3Z[Z:bFN@BPHF;3GV2
-!i10b 1
-Artl
-R24
-R3
-R5
-R6
-DEx4 work 5 opula 0 22 6STmjaYBS:NVD^lfdINem1
-l15
-L14
-VJF<8DY=YIPenT@F]Cn1f03
-R10
-31
-R75
 R76
 R77
+R78
+!i113 1
 R14
 R15
-!s100 Fl6V0jde@`d7Ma>MkhkR62
-!i10b 1
-Epc
-Z78 w1434231295
+Emux4to1
+Z79 w1484775800
 R5
 R6
-R7
-Z79 8C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/PC.vhd
-Z80 FC:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/PC.vhd
+R0
+Z80 8/home/lucas/Downloads/Mips fisico/MIPS/mux4to1.vhd
+Z81 F/home/lucas/Downloads/Mips fisico/MIPS/mux4to1.vhd
 l0
 L4
-VXi`Y4SQ]Kd[ko?nIUG67A2
-R10
+V?7aI_;7gQ3@=2?9N94lho3
+!s100 P=fzhnbCHTdAXn295FIfA1
+R9
 31
-Z81 !s108 1435685874.779000
-Z82 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/PC.vhd|
-Z83 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/PC.vhd|
+R26
+!i10b 1
+Z82 !s108 1484779147.588654
+Z83 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/mux4to1.vhd|
+Z84 !s107 /home/lucas/Downloads/Mips fisico/MIPS/mux4to1.vhd|
+!i113 1
 R14
 R15
-!s100 Q:2JONXU=go[2;?aJRC2=3
-!i10b 1
-Artl
+Abehavioral
 R5
 R6
-DEx4 work 2 pc 0 22 Xi`Y4SQ]Kd[ko?nIUG67A2
-l17
+DEx4 work 7 mux4to1 0 22 ?7aI_;7gQ3@=2?9N94lho3
+l16
 L15
-VJdW?D5EkP?Z@R8eN2Q10J1
-R10
+VYU<FTZHF;?aS79FR8<2=00
+!s100 [O3Zc<zl:B<HUQIh3PzzG1
+R9
 31
-R81
+R26
+!i10b 1
 R82
 R83
+R84
+!i113 1
 R14
 R15
-!s100 2EIDK@?62`7fbZWVD?6o@0
-!i10b 1
-Ereg
-Z84 w1433981918
+Eopula
+R36
+R23
+R3
 R5
 R6
-R7
-Z85 8C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/reg.vhd
-Z86 FC:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/reg.vhd
+R0
+Z85 8/home/lucas/Downloads/Mips fisico/MIPS/opULA.vhd
+Z86 F/home/lucas/Downloads/Mips fisico/MIPS/opULA.vhd
 l0
-L4
-VBk0dZ0MB:W:7bNhEMIOPG2
-R10
+L6
+Vl_EJJ]dSmdzg6W98hSYjz2
+!s100 ZA9@8^d9MPd@7Ud^GFY@X0
+R9
 31
-Z87 !s108 1435685874.431000
-Z88 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/reg.vhd|
-Z89 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/reg.vhd|
+R26
+!i10b 1
+Z87 !s108 1484779147.375870
+Z88 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/opULA.vhd|
+Z89 !s107 /home/lucas/Downloads/Mips fisico/MIPS/opULA.vhd|
+!i113 1
 R14
 R15
-!s100 bCa]No7kJZ2XR:X=XGZoS0
-!i10b 1
 Artl
+R23
+R3
 R5
 R6
-DEx4 work 3 reg 0 22 Bk0dZ0MB:W:7bNhEMIOPG2
-l17
-L15
-VzJl;j[lYaOSQ[9Slmc:DO2
-R10
+DEx4 work 5 opula 0 22 l_EJJ]dSmdzg6W98hSYjz2
+l15
+L14
+VKRNg6Un26LSkRY6>5;hm90
+!s100 3VkCTfg;>Q06mLX@WE5X>3
+R9
 31
+R26
+!i10b 1
 R87
 R88
 R89
+!i113 1
 R14
 R15
-!s100 LdlQ^3lT:LB@Kl>TNAA_L2
-!i10b 1
-Eregbank
-Z90 w1433957869
-R22
-R3
-R24
+Epc
+R1
 R5
 R6
-R7
-Z91 8C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/regBank.vhd
-Z92 FC:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/regBank.vhd
+R0
+Z90 8/home/lucas/Downloads/Mips fisico/MIPS/PC.vhd
+Z91 F/home/lucas/Downloads/Mips fisico/MIPS/PC.vhd
 l0
-L7
-VIe8UJm`Yg@IQLkc]5m[1^1
-!s100 bW1dH5OQ7=mJ<mhYIgLj30
-R10
+L4
+V53NZo[>zF]6fmKJWeO1Tl2
+!s100 j4PLOjFXg>F2Nc]KaKU7b3
+R9
 31
+R26
 !i10b 1
-Z93 !s108 1435685875.737000
-Z94 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/regBank.vhd|
-Z95 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/regBank.vhd|
+Z92 !s108 1484779147.027004
+Z93 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/PC.vhd|
+Z94 !s107 /home/lucas/Downloads/Mips fisico/MIPS/PC.vhd|
+!i113 1
 R14
 R15
 Artl
-R22
-R3
-R24
 R5
 R6
-DEx4 work 7 regbank 0 22 Ie8UJm`Yg@IQLkc]5m[1^1
-l46
-L16
-Vf7gkPX9;6<e2ZljIMJfdD1
-!s100 Ja22hJ09?j9<>hOD99Lmc3
-R10
+DEx4 work 2 pc 0 22 53NZo[>zF]6fmKJWeO1Tl2
+l17
+L15
+Vo[1bcYfzD`?YoI[C=TRSg0
+!s100 5UC:3Vj?ZdzM_=1KaL^E82
+R9
 31
+R26
 !i10b 1
+R92
 R93
 R94
+!i113 1
+R14
+R15
+Ereg
+Z95 w1477067776
+R5
+R6
+R0
+Z96 8/home/lucas/Downloads/Mips fisico/MIPS/reg.vhd
+Z97 F/home/lucas/Downloads/Mips fisico/MIPS/reg.vhd
+l0
+L4
+VEODmICoMUHLM5Z8a<z4Zb2
+!s100 ;9CJf0;E>MA<O8]DOYO:j3
+R9
+31
+R10
+!i10b 1
+Z98 !s108 1484779146.820768
+Z99 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/reg.vhd|
+Z100 !s107 /home/lucas/Downloads/Mips fisico/MIPS/reg.vhd|
+!i113 1
+R14
+R15
+Artl
+R5
+R6
+DEx4 work 3 reg 0 22 EODmICoMUHLM5Z8a<z4Zb2
+l17
+L15
+VOo6@A>J6[eHV9AIoe:n8`3
+!s100 b@XaFZgdWPFZc9`NPBm:20
+R9
+31
+R10
+!i10b 1
+R98
+R99
+R100
+!i113 1
+R14
+R15
+Eregbank
 R95
+R21
+R3
+R23
+R5
+R6
+R0
+Z101 8/home/lucas/Downloads/Mips fisico/MIPS/regBank.vhd
+Z102 F/home/lucas/Downloads/Mips fisico/MIPS/regBank.vhd
+l0
+L7
+VL]b8@iBff^0aaVe7b``RC3
+!s100 C:4?ZYlzY4oF7EZ6z=eak3
+R9
+31
+R26
+!i10b 1
+Z103 !s108 1484779147.858982
+Z104 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/regBank.vhd|
+Z105 !s107 /home/lucas/Downloads/Mips fisico/MIPS/regBank.vhd|
+!i113 1
+R14
+R15
+Artl
+R21
+R3
+R23
+R5
+R6
+DEx4 work 7 regbank 0 22 L]b8@iBff^0aaVe7b``RC3
+l46
+L16
+V=cJSPONoB_Im1gYPbj8aF2
+!s100 =N]GSljLCo1ziTTN2ZYBi1
+R9
+31
+R26
+!i10b 1
+R103
+R104
+R105
+!i113 1
 R14
 R15
 Esignalextensor
-Z96 w1433958653
+R95
 R6
 R5
 R4
-R7
-Z97 8C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/signalExtensor.vhd
-Z98 FC:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/signalExtensor.vhd
+R0
+Z106 8/home/lucas/Downloads/Mips fisico/MIPS/signalExtensor.vhd
+Z107 F/home/lucas/Downloads/Mips fisico/MIPS/signalExtensor.vhd
 l0
 L5
-VCJSQJmFm9lf=CMFX``gMN2
-R10
+V>F=GSFMBLP6F<nWL=Dn1C0
+!s100 0_zPSTF:;97Dn:>6aOPch1
+R9
 31
-Z99 !s108 1435685874.912000
-Z100 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/signalExtensor.vhd|
-Z101 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/signalExtensor.vhd|
+R26
+!i10b 1
+Z108 !s108 1484779147.091087
+Z109 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/signalExtensor.vhd|
+Z110 !s107 /home/lucas/Downloads/Mips fisico/MIPS/signalExtensor.vhd|
+!i113 1
 R14
 R15
-!s100 TZ8en7TeDi1`AW?S1i?Fn2
-!i10b 1
 Artl
 R6
 R5
 R4
-DEx4 work 14 signalextensor 0 22 CJSQJmFm9lf=CMFX``gMN2
+DEx4 work 14 signalextensor 0 22 >F=GSFMBLP6F<nWL=Dn1C0
 l13
 L12
-VoO[hjO:HUN^05]M6b@@[A0
-R10
+V4hX2]_05jnS];>bc]95i=1
+!s100 :Q9jIfNVlQc`nYc<Wz_BE0
+R9
 31
-R99
-R100
-R101
+R26
+!i10b 1
+R108
+R109
+R110
+!i113 1
 R14
 R15
-!s100 ^UzVm`1_9XHJ`k@oWOmFA0
-!i10b 1
 Eula
-Z102 w1435683681
+R1
 R4
 R3
-R24
+R23
 R5
 R6
-R7
-Z103 8C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/ULA.vhd
-Z104 FC:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/ULA.vhd
+R0
+Z111 8/home/lucas/Downloads/Mips fisico/MIPS/ULA.vhd
+Z112 F/home/lucas/Downloads/Mips fisico/MIPS/ULA.vhd
 l0
 L6
-V0gX6?2_>DK0N^_[^LgEC20
-R10
+VddRGS3O]mR1VV_``68IBb1
+!s100 OkPEC3`=oBN5Im6V1Hb;T3
+R9
 31
-Z105 !s108 1435685875.199000
-Z106 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/ULA.vhd|
-Z107 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/ULA.vhd|
+R26
+!i10b 1
+Z113 !s108 1484779147.295799
+Z114 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/ULA.vhd|
+Z115 !s107 /home/lucas/Downloads/Mips fisico/MIPS/ULA.vhd|
+!i113 1
 R14
 R15
-!s100 P``5Rbz?mA^BMSBBXjF8O0
-!i10b 1
 Artl
 R4
 R3
-R24
+R23
 R5
 R6
-DEx4 work 3 ula 0 22 0gX6?2_>DK0N^_[^LgEC20
+DEx4 work 3 ula 0 22 ddRGS3O]mR1VV_``68IBb1
 l17
 L15
-V5cIC@?c[B:LUETMIgaDNE0
-R10
+V<k9SYio46H7]58]H;Pmb93
+!s100 TS78`_o[LdfEoUk]W8H=>2
+R9
 31
-R105
-R106
-R107
+R26
+!i10b 1
+R113
+R114
+R115
+!i113 1
 R14
 R15
-!s100 dYoZmR7L_[]Ui]UiWi0oz2
-!i10b 1
