@@ -19,6 +19,7 @@ begin
 			A when "00",
 			B when "01",
 			C when "10",
-			D when "11";
+			D when "11",
+			"00000000000000000000000000000000" when others;
 	 
 end behavioral;
