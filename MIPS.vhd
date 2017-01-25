@@ -141,6 +141,8 @@ architecture rtl of MIPS is
 	---Ula fonte retirado , adicionado adiantaA E adiantaB
 	component controller
 		PORT (
+		clk : in std_logic;
+		rst	: in std_logic;
 		opcode : IN std_logic_vector(5 downto 0);
 		ulaOp : out std_logic_vector(1 downto 0);
 		RegDst, escMem, lerMem, DvC, memParaReg, escReg: out std_logic;
@@ -232,6 +234,8 @@ begin
 	
 	--Nao funciona por que nao tem adiantaA adiantaB
 	controle: controller PORT MAP (
+		clk => clk,
+		rst => rst,
 		opcode => sig_opcode,
 		ulaOp => sig_ulaOp,
 		RegDST => sig_RegDST, 
