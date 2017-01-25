@@ -5,6 +5,8 @@ use ieee.std_logic_unsigned.all;
 
 ENTITY controller IS
 	PORT (
+		clk : in std_logic;
+		rst	: in std_logic;
 		opcode : IN std_logic_vector(5 downto 0);
 		ulaOp : out std_logic_vector(1 downto 0);
 		RegDst, escMem, lerMem, DvC, memParaReg, escReg: out std_logic;
@@ -15,7 +17,7 @@ END controller;
 
 ARCHITECTURE rtl OF controller IS	 
 signal combination0,combination1 : std_logic_vector(1 downto 0);
-
+signal sinal11,sinal22,sinal33,sinal44 : std_logic;
 -- REG SOURCE
 -- REG2 ->
 -- REG3 ->
@@ -24,8 +26,8 @@ signal combination0,combination1 : std_logic_vector(1 downto 0);
 -- sinal3 = true , reg2 = rs1
 -- sinal4 = true , reg3 = rs1
 
-COMPONENT comparador  -- ele pega o resultado da comparação entre tres registradores e gera 4 sinais.
-	port(	-- que indicam a 
+COMPONENT comparador  
+	port(
 		  clk : in std_logic;
 		  rst:in std_logic;	
 		  reg1,reg2,reg3 : in std_logic_vector(4 downto 0);
@@ -34,7 +36,7 @@ COMPONENT comparador  -- ele pega o resultado da comparação entre tres registr
 	
 end COMPONENT;
 
-component geradordesinais -- pega 4 sinais , e o opcode e gera os sinais de controle dos dois multiplexadores
+component geradordesinais
 	port(
 		opcode : in std_logic_vector(5 downto 0);
 		sinal1,sinal2,sinal3,sinal4: in std_logic;
@@ -43,6 +45,26 @@ component geradordesinais -- pega 4 sinais , e o opcode e gera os sinais de cont
 end component;
 
 BEGIN
+	igualitario: comparador port map(
+		clk=>clk,
+		rst=>rst,
+		reg1=>reg1,
+		reg2=>reg2,
+		reg3=>reg3,
+		sinal1 => sinal11,
+		sinal2 => sinal22,
+		sinal3 => sinal33,
+		sinal4 => sinal44
+	);
+	gerador: geradordesinais port map(
+		opcode => opcode,
+		sinal1 => sinal11,
+		sinal2 => sinal22,
+		sinal3 => sinal33,
+		sinal4 => sinal44,
+		AdiantaA => AdiantaA,
+		AdiantaB => AdiantaB
+	);
 	process(opcode)
 	begin
 		CASE opcode IS

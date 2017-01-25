@@ -1,0 +1,318 @@
+# Compile of MIPS.vht was successful.
+# Compile of addSub.vhd was successful.
+# Compile of array32.vhd was successful.
+# Compile of comparador.vhd was successful.
+# Compile of controller.vhd was successful.
+# Compile of dec5p1.vhd was successful.
+# Compile of flipflop.vhd was successful.
+# Compile of geradordesinais.vhd was successful.
+# Compile of memData.vhd was successful.
+# Compile of memData_inst.vhd failed with 1 errors.
+# Compile of memInst.vhd was successful.
+# Compile of memInst2.vhd was successful with warnings.
+# Compile of memInst_inst.vhd failed with 1 errors.
+# Compile of MIPS.vhd was successful.
+# Compile of mux2to1.vhd was successful.
+# Compile of mux4to1.vhd was successful.
+# Compile of mux32to1.vhd was successful.
+# Compile of opULA.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of regBank.vhd was successful.
+# Compile of shifter.vhd was successful.
+# Compile of signalExtensor.vhd was successful.
+# Compile of ULA.vhd was successful.
+# 24 compiles, 2 failed with 2 errors.
+# Compile of MIPS.vht was successful.
+# Compile of addSub.vhd was successful.
+# Compile of array32.vhd was successful.
+# Compile of comparador.vhd was successful.
+# Compile of controller.vhd was successful.
+# Compile of dec5p1.vhd was successful.
+# Compile of flipflop.vhd was successful.
+# Compile of geradordesinais.vhd was successful.
+# Compile of memData.vhd was successful.
+# Compile of memData_inst.vhd failed with 1 errors.
+# Compile of memInst.vhd was successful.
+# Compile of memInst2.vhd was successful with warnings.
+# Compile of memInst_inst.vhd failed with 1 errors.
+# Compile of MIPS.vhd was successful.
+# Compile of mux2to1.vhd was successful.
+# Compile of mux4to1.vhd was successful.
+# Compile of mux32to1.vhd was successful.
+# Compile of opULA.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of regBank.vhd was successful.
+# Compile of shifter.vhd was successful.
+# Compile of signalExtensor.vhd was successful.
+# Compile of ULA.vhd was successful.
+# 24 compiles, 2 failed with 2 errors.
+# Compile of MIPS.vht was successful.
+# Compile of addSub.vhd was successful.
+# Compile of array32.vhd was successful.
+# Compile of comparador.vhd was successful.
+# Compile of controller.vhd was successful.
+# Compile of dec5p1.vhd was successful.
+# Compile of flipflop.vhd was successful.
+# Compile of geradordesinais.vhd was successful.
+# Compile of memData.vhd was successful.
+# Compile of memData_inst.vhd failed with 1 errors.
+# Compile of memInst2.vhd was successful with warnings.
+# Compile of memInst_inst.vhd failed with 1 errors.
+# Compile of MIPS.vhd was successful.
+# Compile of mux2to1.vhd was successful.
+# Compile of mux4to1.vhd was successful.
+# Compile of mux32to1.vhd was successful.
+# Compile of opULA.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of regBank.vhd was successful.
+# Compile of shifter.vhd was successful.
+# Compile of signalExtensor.vhd was successful.
+# Compile of ULA.vhd was successful.
+# 23 compiles, 2 failed with 2 errors.
+do MIPS_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim LE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Modifying /home/lucas/Downloads/Mips fisico/MIPS/simulation/modelsim/Novasimulacao.mpf
+# 
+# vcom -93 -work work {/home/lucas/Downloads/Mips fisico/MIPS/memInst2.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:05:39 on Jan 19,2017
+# vcom -reportprogress 300 -93 -work work /home/lucas/Downloads/Mips fisico/MIPS/memInst2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity memInst2
+# -- Compiling architecture rlt of memInst2
+# ** Warning: [4] /home/lucas/Downloads/Mips fisico/MIPS/memInst2.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 14:05:39 on Jan 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vcom -93 -work work {/home/lucas/Downloads/Mips fisico/MIPS/dec5p1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:05:39 on Jan 19,2017
+# vcom -reportprogress 300 -93 -work work /home/lucas/Downloads/Mips fisico/MIPS/dec5p1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dec5to1
+# -- Compiling architecture rtl of dec5to1
+# End time: 14:05:39 on Jan 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/lucas/Downloads/Mips fisico/MIPS/array32.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:05:39 on Jan 19,2017
+# vcom -reportprogress 300 -93 -work work /home/lucas/Downloads/Mips fisico/MIPS/array32.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package array32
+# -- Compiling package body array32
+# -- Loading package array32
+# End time: 14:05:39 on Jan 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/lucas/Downloads/Mips fisico/MIPS/reg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:05:39 on Jan 19,2017
+# vcom -reportprogress 300 -93 -work work /home/lucas/Downloads/Mips fisico/MIPS/reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg
+# -- Compiling architecture rtl of reg
+# End time: 14:05:39 on Jan 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/lucas/Downloads/Mips fisico/MIPS/addSub.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:05:39 on Jan 19,2017
+# vcom -reportprogress 300 -93 -work work /home/lucas/Downloads/Mips fisico/MIPS/addSub.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity addSub
+# -- Compiling architecture rtl of addSub
+# End time: 14:05:39 on Jan 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/lucas/Downloads/Mips fisico/MIPS/mux2to1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:05:39 on Jan 19,2017
+# vcom -reportprogress 300 -93 -work work /home/lucas/Downloads/Mips fisico/MIPS/mux2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavioral of mux2to1
+# End time: 14:05:39 on Jan 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/lucas/Downloads/Mips fisico/MIPS/PC.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:05:39 on Jan 19,2017
+# vcom -reportprogress 300 -93 -work work /home/lucas/Downloads/Mips fisico/MIPS/PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture rtl of PC
+# End time: 14:05:39 on Jan 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/lucas/Downloads/Mips fisico/MIPS/signalExtensor.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:05:39 on Jan 19,2017
+# vcom -reportprogress 300 -93 -work work /home/lucas/Downloads/Mips fisico/MIPS/signalExtensor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity signalExtensor
+# -- Compiling architecture rtl of signalExtensor
+# End time: 14:05:39 on Jan 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/lucas/Downloads/Mips fisico/MIPS/controller.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:05:39 on Jan 19,2017
+# vcom -reportprogress 300 -93 -work work /home/lucas/Downloads/Mips fisico/MIPS/controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture rtl of controller
+# End time: 14:05:39 on Jan 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/lucas/Downloads/Mips fisico/MIPS/flipflop.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:05:39 on Jan 19,2017
+# vcom -reportprogress 300 -93 -work work /home/lucas/Downloads/Mips fisico/MIPS/flipflop.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flipflop
+# -- Compiling architecture rtl of flipflop
+# End time: 14:05:39 on Jan 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/lucas/Downloads/Mips fisico/MIPS/ULA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:05:39 on Jan 19,2017
+# vcom -reportprogress 300 -93 -work work /home/lucas/Downloads/Mips fisico/MIPS/ULA.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ULA
+# -- Compiling architecture rtl of ULA
+# End time: 14:05:40 on Jan 19,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/lucas/Downloads/Mips fisico/MIPS/opULA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:05:40 on Jan 19,2017
+# vcom -reportprogress 300 -93 -work work /home/lucas/Downloads/Mips fisico/MIPS/opULA.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity opULA
+# -- Compiling architecture rtl of opULA
+# End time: 14:05:40 on Jan 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/lucas/Downloads/Mips fisico/MIPS/MIPS.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:05:40 on Jan 19,2017
+# vcom -reportprogress 300 -93 -work work /home/lucas/Downloads/Mips fisico/MIPS/MIPS.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity MIPS
+# -- Compiling architecture rtl of MIPS
+# End time: 14:05:40 on Jan 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/lucas/Downloads/Mips fisico/MIPS/memData.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:05:40 on Jan 19,2017
+# vcom -reportprogress 300 -93 -work work /home/lucas/Downloads/Mips fisico/MIPS/memData.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memData
+# -- Compiling architecture SYN of memdata
+# End time: 14:05:40 on Jan 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/lucas/Downloads/Mips fisico/MIPS/mux4to1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:05:40 on Jan 19,2017
+# vcom -reportprogress 300 -93 -work work /home/lucas/Downloads/Mips fisico/MIPS/mux4to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4to1
+# -- Compiling architecture behavioral of mux4to1
+# End time: 14:05:40 on Jan 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/lucas/Downloads/Mips fisico/MIPS/comparador.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:05:40 on Jan 19,2017
+# vcom -reportprogress 300 -93 -work work /home/lucas/Downloads/Mips fisico/MIPS/comparador.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity comparador
+# -- Compiling architecture behavior of comparador
+# End time: 14:05:40 on Jan 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/lucas/Downloads/Mips fisico/MIPS/geradordesinais.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:05:40 on Jan 19,2017
+# vcom -reportprogress 300 -93 -work work /home/lucas/Downloads/Mips fisico/MIPS/geradordesinais.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity geradordesinais
+# -- Compiling architecture behavior of geradordesinais
+# End time: 14:05:40 on Jan 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/lucas/Downloads/Mips fisico/MIPS/mux32to1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:05:40 on Jan 19,2017
+# vcom -reportprogress 300 -93 -work work /home/lucas/Downloads/Mips fisico/MIPS/mux32to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package array32
+# -- Compiling entity mux32to1
+# -- Compiling architecture rtl of mux32to1
+# End time: 14:05:40 on Jan 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/lucas/Downloads/Mips fisico/MIPS/regBank.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:05:40 on Jan 19,2017
+# vcom -reportprogress 300 -93 -work work /home/lucas/Downloads/Mips fisico/MIPS/regBank.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package array32
+# -- Compiling entity regBank
+# -- Compiling architecture rtl of regBank
+# End time: 14:05:40 on Jan 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim -do MIPS_run_msim_rtl_vhdl.do -i -l msim_transcript work.MIPS.vht

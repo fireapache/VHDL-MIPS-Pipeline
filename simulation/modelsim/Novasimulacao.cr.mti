@@ -1,0 +1,193 @@
+{/home/lucas/Downloads/Mips fisico/MIPS/PC.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/PC.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity PC
+-- Compiling architecture rtl of PC
+
+} {} {}} {/home/lucas/Downloads/Mips fisico/MIPS/mux32to1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/mux32to1.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package array32
+-- Compiling entity mux32to1
+-- Compiling architecture rtl of mux32to1
+
+} {} {}} {/home/lucas/Downloads/Mips fisico/MIPS/addSub.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/addSub.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Compiling entity addSub
+-- Compiling architecture rtl of addSub
+
+} {} {}} {/home/lucas/Downloads/Mips fisico/MIPS/controller.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/controller.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity controller
+-- Compiling architecture rtl of controller
+
+} {} {}} {/home/lucas/Downloads/Mips fisico/MIPS/geradordesinais.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/geradordesinais.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity geradordesinais
+-- Compiling architecture behavior of geradordesinais
+
+} {} {}} {/home/lucas/Downloads/Mips fisico/MIPS/shifter.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/shifter.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity shifter
+-- Compiling architecture rtl of shifter
+
+} {} {}} {/home/lucas/Downloads/Mips fisico/MIPS/mux2to1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/mux2to1.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux2to1
+-- Compiling architecture behavioral of mux2to1
+
+} {} {}} {/home/lucas/Downloads/Mips fisico/MIPS/opULA.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/opULA.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity opULA
+-- Compiling architecture rtl of opULA
+
+} {} {}} {/home/lucas/Downloads/Mips fisico/MIPS/memData.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/memData.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity memData
+-- Compiling architecture SYN of memdata
+
+} {} {}} {/home/lucas/Downloads/Mips fisico/MIPS/ULA.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/ULA.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity ULA
+-- Compiling architecture rtl of ULA
+
+} {} {}} {/home/lucas/Downloads/Mips fisico/MIPS/regBank.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/regBank.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package array32
+-- Compiling entity regBank
+-- Compiling architecture rtl of regBank
+
+} {} {}} {/home/lucas/Downloads/Mips fisico/MIPS/mux4to1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/mux4to1.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux4to1
+-- Compiling architecture behavioral of mux4to1
+
+} {} {}} {/home/lucas/Downloads/Mips fisico/MIPS/dec5p1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/dec5p1.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity dec5to1
+-- Compiling architecture rtl of dec5to1
+
+} {} {}} {/home/lucas/Downloads/Mips fisico/MIPS/array32.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/array32.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package array32
+-- Compiling package body array32
+-- Loading package array32
+
+} {} {}} {/home/lucas/Downloads/Mips fisico/MIPS/flipflop.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/flipflop.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity flipflop
+-- Compiling architecture rtl of flipflop
+
+} {} {}} {/home/lucas/Downloads/Mips fisico/MIPS/signalExtensor.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/signalExtensor.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity signalExtensor
+-- Compiling architecture rtl of signalExtensor
+
+} {} {}} {/home/lucas/Downloads/Mips fisico/MIPS/reg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/reg.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity reg
+-- Compiling architecture rtl of reg
+
+} {} {}} {/home/lucas/Downloads/Mips fisico/MIPS/simulation/modelsim/MIPS.vht} {1 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/simulation/modelsim/MIPS.vht}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity MIPS_vhd_tst
+-- Compiling architecture MIPS_arch of MIPS_vhd_tst
+
+} {} {}} {/home/lucas/Downloads/Mips fisico/MIPS/memInst2.vhd} {2 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/memInst2.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity memInst2
+-- Compiling architecture rlt of memInst2
+** Warning: [4] /home/lucas/Downloads/Mips fisico/MIPS/memInst2.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+
+} {} {}} {/home/lucas/Downloads/Mips fisico/MIPS/comparador.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/comparador.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity comparador
+-- Compiling architecture behavior of comparador
+
+} {} {}} {/home/lucas/Downloads/Mips fisico/MIPS/MIPS.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/lucas/Downloads/Mips fisico/MIPS/MIPS.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MIPS
+-- Compiling architecture rtl of MIPS
+
+} {} {}}

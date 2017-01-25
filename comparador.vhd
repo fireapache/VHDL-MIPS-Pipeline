@@ -22,7 +22,7 @@ entity comparador is
 end comparador;
 
 architecture behavior of comparador is 
-signal rs0,rs1 : std_logic_vector(5 downto 0);-- saidas dos flip flops
+signal rs0,rs1 : std_logic_vector(4 downto 0);-- saidas dos flip flops
 
 component flipflop
 	generic(
