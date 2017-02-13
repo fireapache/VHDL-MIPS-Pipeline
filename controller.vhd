@@ -11,13 +11,15 @@ ENTITY controller IS
 		ulaOp : out std_logic_vector(1 downto 0);
 		RegDst, escMem, lerMem, DvC, memParaReg, escReg: out std_logic;
 		reg1,reg2,reg3 : in std_logic_vector(4 downto 0);
-	   adiantaA,adiantaB :out std_logic_vector(1 downto 0)
+		fontepc			: in std_logic;
+		adiantaA,adiantaB :out std_logic_vector(1 downto 0)
 	);
 END controller;
 
 ARCHITECTURE rtl OF controller IS	 
 signal combination0,combination1 : std_logic_vector(1 downto 0);
 signal sinal11,sinal22,sinal33,sinal44 : std_logic;
+signal sig_fontepc:std_logic;
 -- REG SOURCE
 -- REG2 ->
 -- REG3 ->
@@ -39,12 +41,15 @@ end COMPONENT;
 component geradordesinais
 	port(
 		opcode : in std_logic_vector(5 downto 0);
+		clk,rst : in std_logic;
 		sinal1,sinal2,sinal3,sinal4: in std_logic;
+		fontepc			: in std_logic;
 		AdiantaA,AdiantaB:out std_logic_vector(1 downto 0)
 	);
 end component;
 
 BEGIN
+  sig_fontepc <= fontepc;
 	igualitario: comparador port map(
 		clk=>clk,
 		rst=>rst,
@@ -57,11 +62,14 @@ BEGIN
 		sinal4 => sinal44
 	);
 	gerador: geradordesinais port map(
-		opcode => opcode,
-		sinal1 => sinal11,
-		sinal2 => sinal22,
-		sinal3 => sinal33,
-		sinal4 => sinal44,
+		opcode  => opcode,
+		clk	  => clk,
+		rst     => rst,
+		sinal1  => sinal11,
+		sinal2  => sinal22,
+		sinal3  => sinal33,
+		sinal4  => sinal44,
+		fontepc => sig_fontepc,
 		AdiantaA => AdiantaA,
 		AdiantaB => AdiantaB
 	);
