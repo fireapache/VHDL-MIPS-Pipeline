@@ -32,6 +32,7 @@ architecture rtl of MIPS is
 	signal in_PIPE2, out_pipe2: std_logic_vector( 145 downto 0); -- MODIFICADO , RETIRADO BIT NO SIG_ULAFONTE
 	signal in_PIPEAUX,out_pipeaux:std_logic_vector( 3 downto 0); -- 4 bits
 ---------------------------------------------------------------------------------------
+	signal sig_saida_bit_sujo1,sig_saida_bit_sujo2,sig_saida_bit_sujo3,saida_bit_sujo1,saida_bit_sujo2,saida_bit_sujo3 : std_logic; -- saidas dos pipes dos bitsujos
 	component reg
 		generic(
 			DATA_WIDTH : natural := 8
@@ -42,7 +43,13 @@ architecture rtl of MIPS is
 			Q : out std_logic_vector ((DATA_WIDTH-1) downto 0)
 		); 
 	END component ;
-	
+	component mux2to11bit
+		Port (
+		SEL : in  STD_logic;
+		A, B   : in  STD_logic;
+		X   : out STD_LOGIC
+	);
+	end component;
 	component memInst
 		PORT(
 			address	: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
@@ -147,10 +154,19 @@ architecture rtl of MIPS is
 		ulaOp : out std_logic_vector(1 downto 0);
 		RegDst, escMem, lerMem, DvC, memParaReg, escReg: out std_logic;
 		reg1,reg2,reg3 : in std_logic_vector(4 downto 0);
-	   adiantaA,adiantaB :out std_logic_vector(1 downto 0)
+		fontepc			: in std_logic;
+		adiantaA,adiantaB :out std_logic_vector(1 downto 0)
 	);
 	END component;
-	
+	------------------------------------------------
+	component flipflop1b
+		port(
+		clk, rst : in std_logic;  
+		D : in  std_logic;  
+		Q : out std_logic
+	);
+	end component;
+	------------------------------------------------
 	component flipflop
 		generic(
 			DATA_WIDTH : natural := 32
@@ -225,14 +241,13 @@ begin
 	sig_OUT_PCP4_2 <= out_PIPE1(63 downto 32);
 	sig_inst <= out_PIPE1(31 downto 0);
 	
-	sig_opcode   <= sig_inst(31 downto 26);
-	sig_ReadReg1 <= sig_inst(25 downto 21);
-	sig_ReadReg2 <= sig_inst(20 downto 16);
-	sig_imediate <= sig_inst(15 downto 0);
-	sig_regDest  <= sig_inst(15 downto 11);
+	sig_opcode   <= sig_inst(31 downto 26); --opcode 
+	sig_ReadReg1 <= sig_inst(25 downto 21); -- reg 1  
+	sig_ReadReg2 <= sig_inst(20 downto 16); -- reg 2
+	sig_imediate <= sig_inst(15 downto 0);	 -- imediato
+	sig_regDest  <= sig_inst(15 downto 11); -- registrador destino
 
 	
-	--Nao funciona por que nao tem adiantaA adiantaB
 	controle: controller PORT MAP (
 		clk => clk,
 		rst => rst,
@@ -244,16 +259,17 @@ begin
 		---------------------------------------------------------------------------
 		--ulaFonte => sig_ulaFonte, -- deve ser modificado  de dois bits para  4 bits
 		---------------------------------------------------------------------------
-		escMem => sig_escMem,
-		lerMem => sig_lerMem,
-		DvC => sig_DvC,
+		escMem  => sig_escMem,
+		lerMem  => sig_lerMem,
+		DvC     => sig_DvC,
 		memParaReg => sig_memParaReg,
-		escReg => sig_escReg,
-		reg1 => sig_regDest, -- registrador destino
-		reg2 => sig_ReadReg1,-- registrador dado lido 1
-		reg3 => sig_ReadReg2,-- registrador dado lido 2
-		adiantaA =>sig_adiantaA,
-		adiantaB =>sig_adiantaB
+		escReg  => sig_escReg,
+		reg1    => sig_regDest, -- registrador destino
+		reg2    => sig_ReadReg1,-- registrador dado lido 1
+		reg3    => sig_ReadReg2,-- registrador dado lido 2
+		fontepc => sig_fontePC,
+		adiantaA => sig_adiantaA,
+		adiantaB => sig_adiantaB
 	);
     
 	registradores: regbank PORT MAP (
@@ -285,6 +301,14 @@ begin
 		D => in_PIPE2,
 		Q => out_PIPE2
 	);
+-------------------------------------------------------------------------------	
+	PIPE_AUX_BIT_SUJO1: flipflop1b PORT MAP(
+		clk => clk,
+		rst => rst,
+		D   => sig_fontePC,
+		Q   => saida_bit_sujo1	
+	);
+	
 --------------------------------------------------------------------------------
 	PIPEAUX: flipflop GENERIC MAP(DATA_WIDTH => 4) PORT MAP(
 		clk => clk,
@@ -297,9 +321,6 @@ begin
 
 	sig_ulaOp_1 <= out_PIPE2(145 downto 144);
 	sig_RegDST_1 <= out_PIPE2(143);
-	-------------------------------------------------------------------------------
---	sig_ulaFonte_1 <= out_PIPE2(143); -- modificar aqui para receber outro sinal
-	-------------------------------------------------------------------------------
 	sig_escMem_1 <= out_PIPE2(142);
 	sig_lerMem_1 <= out_PIPE2(141);
 	sig_DvC_1 <= out_PIPE2(140);
@@ -318,7 +339,9 @@ begin
 	sig_adiantaA1 <= out_pipeaux(3 DOWNTO 2);
 	sig_adiantaB1 <= out_pipeaux(1 DOWNTO 0);
 ------------------------------------------------------------------
-	
+--RECEBE O SINAL DA SAIDA DO REGISTRADOR DE BIT SUJO
+	sig_saida_bit_sujo1 <= saida_bit_sujo1;
+------------------------------------------------------------------	
 	
 	inPC: addSub GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
 		a => sig_OUT_PCP4_3,
@@ -367,7 +390,15 @@ begin
 		B => sig_regDest_1,
 		X => sig_RegEsc_0
 	);
+---------------------------------------------------------------------------------------------------
+		mux_ANTES_DO_SEGUNDO_PIPEDOBITSUJO : mux2to11bit  PORT MAP (
+		sel => sig_fontePC,
+		A => sig_saida_bit_sujo1,
+		B => sig_fontePC,
+		X => saida_bit_sujo2
+	);
 
+---------------------------------------------------------------------------------------------------
 	in_PIPE3 <= sig_escMem_1 & sig_lerMem_1 & sig_DvC_1 & sig_memParaReg_1 & sig_escReg_1 & sig_OUT_jump & sig_ULA_zero & sig_ULA_result & sig_dadoLido2_1 & sig_RegEsc_0;
 
 	PIPE3: flipflop GENERIC MAP (DATA_WIDTH => 107) PORT MAP (
@@ -378,8 +409,10 @@ begin
 	);
 
 	-- QUARTO ESTÁGIO --
-
-	sig_escMem_2 <= out_PIPE3(106);
+	------------------------------------------------------------------------
+	sig_saida_bit_sujo2 <= saida_bit_sujo2; -- saida do pipe bit sujo 2
+	-------------------------------------------------------------------------
+	sig_escMem_2 <=  (not(sig_saida_bit_sujo2 )) and out_PIPE3(106);  --HAZARD DE CONTROLE 
 	sig_lerMem_2 <= out_PIPE3(105);
 	sig_DvC_2 <= out_PIPE3(104);
 	sig_memParaReg_2 <= out_PIPE3(103);
@@ -391,9 +424,9 @@ begin
 	-----------------------------------------------------------------------
 	sig_dadoLido2_2 <= out_PIPE3(36 downto 5);
 	sig_RegEsc_1 <= out_PIPE3(4 downto 0);
-
+	---------------------------------------------------------------
 	sig_fontePC <= sig_DvC_2 and sig_ULA_zero_1;
-
+	---------------------------------------------------------------
 	memD: memData PORT MAP (
 		address	 => sig_ULA_result_1(11 downto 2),
 		clock	 => clk,
@@ -404,6 +437,17 @@ begin
 
 	in_PIPE4 <= sig_memParaReg_2 & sig_escReg_2 & sig_OUT_memD & sig_ULA_result_1 & sig_RegEsc_1;
 
+-----------------------------------------------------------------------------	
+	PIPE_4_bit_sujo: flipflop1b PORT MAP (
+			clk => clk,
+			rst => rst,
+			D => sig_saida_bit_sujo2,
+			Q => saida_bit_sujo3
+		);
+
+-----------------------------------------------------------------------------
+	
+	
 	PIPE4: flipflop GENERIC MAP (DATA_WIDTH => 71) PORT MAP (
 		clk => clk,
 		rst => rst,
@@ -412,13 +456,16 @@ begin
 	);
 
 	-- QUINTO ESTÁGIO --
-
+	
+	
+------------------------------------------------------------------------
+	sig_saida_bit_sujo3 <= saida_bit_sujo3;
+------------------------------------------------------------------------
 	sig_memParaReg_3 <= out_PIPE4(70);
-	sig_escReg_3 <= out_PIPE4(69);
+	sig_escReg_3 <= ((not(sig_saida_bit_sujo3))and out_PIPE4(69)); --HAZARD DE CONTROLE 
 	sig_OUT_memD_1 <= out_PIPE4(68 downto 37);
 	sig_ULA_result_2 <= out_PIPE4(36 downto 5);
 	sig_RegEsc_2 <= out_PIPE4(4 downto 0);
-
 	muxEscReg2: mux2to1 GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
 		sel => sig_memParaReg_3,
 		A => sig_ULA_result_2,
