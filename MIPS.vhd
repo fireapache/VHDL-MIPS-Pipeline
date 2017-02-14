@@ -24,7 +24,7 @@ architecture rtl of MIPS is
 	signal sig_ulaFonte, sig_ulaFonte_1, sig_escMem, sig_escMem_1, sig_lerMem, 
 	sig_lerMem_1, sig_DvC, sig_DvC_1, sig_memParaReg, sig_memParaReg_1, sig_fontePC, we3, 
 	sig_escReg_1, sig_ULA_zero, sig_RegDST, sig_escMem_2, sig_lerMem_2,
-	sig_DvC_2, sig_memParaReg_2, sig_escReg_2, sig_ULA_zero_1, sig_memParaReg_3, sig_escReg_3, sig_escReg, sig_RegDST_1 : STD_LOGIC;
+	sig_DvC_2, sig_memParaReg_2, sig_escReg_2, sig_ULA_zero_1, sig_memParaReg_3, sig_escReg_3, sig_escReg, sig_RegDST_1,sig_fontePC2 : STD_LOGIC;
 	signal sig_operULA: std_logic_vector(3 downto 0);
 	signal in_PIPE3,  out_PIPE3: std_logic_vector (106 downto 0);
 	signal in_PIPE4, out_PIPE4: std_logic_vector(70 downto 0);
@@ -33,6 +33,10 @@ architecture rtl of MIPS is
 	signal in_PIPEAUX,out_pipeaux:std_logic_vector( 3 downto 0); -- 4 bits
 ---------------------------------------------------------------------------------------
 	signal sig_saida_bit_sujo1,sig_saida_bit_sujo2,sig_saida_bit_sujo3,saida_bit_sujo1,saida_bit_sujo2,saida_bit_sujo3 : std_logic; -- saidas dos pipes dos bitsujos
+	------------------------------------------------------------------------------------
+	signal saidaprimeiromux,saidasegundopipe,saidaprimeiropipe ,saidadoprimeiroreg ,saidaor: std_logic;
+	
+	
 	component reg
 		generic(
 			DATA_WIDTH : natural := 8
@@ -206,7 +210,7 @@ begin
 	);
 	
 	mux_IN_PC: mux2to1 GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
-		sel => sig_fontePC,
+		sel => sig_fontePC2,
 		A => sig_OUT_PCP4_1,
 		B => sig_OUT_jump_1,
 		X => sig_in_PC
@@ -267,7 +271,7 @@ begin
 		reg1    => sig_regDest, -- registrador destino
 		reg2    => sig_ReadReg1,-- registrador dado lido 1
 		reg3    => sig_ReadReg2,-- registrador dado lido 2
-		fontepc => sig_fontePC,
+		fontepc => sig_fontePC2,
 		adiantaA => sig_adiantaA,
 		adiantaB => sig_adiantaB
 	);
@@ -305,7 +309,7 @@ begin
 	PIPE_AUX_BIT_SUJO1: flipflop1b PORT MAP(
 		clk => clk,
 		rst => rst,
-		D   => sig_fontePC,
+		D   => sig_fontePC2,
 		Q   => saida_bit_sujo1	
 	);
 	
@@ -391,10 +395,10 @@ begin
 		X => sig_RegEsc_0
 	);
 ---------------------------------------------------------------------------------------------------
-		mux_ANTES_DO_SEGUNDO_PIPEDOBITSUJO : mux2to11bit  PORT MAP (
-		sel => sig_fontePC,
+	mux_ANTES_DO_SEGUNDO_PIPEDOBITSUJO : mux2to11bit  PORT MAP (
+		sel => sig_fontePC2,
 		A => sig_saida_bit_sujo1,
-		B => sig_fontePC,
+		B => sig_fontePC2,
 		X => saida_bit_sujo2
 	);
 
@@ -436,7 +440,42 @@ begin
 	);
 
 	in_PIPE4 <= sig_memParaReg_2 & sig_escReg_2 & sig_OUT_memD & sig_ULA_result_1 & sig_RegEsc_1;
-
+-----------------------------------------------------------------------------
+	
+	
+-----------------------------------------------------------------------------
+	
+	primeiro_mux_antes_do_pipe: mux2to11bit  PORT MAP (
+		sel => saidaor,
+		A 	 => sig_fontePC,
+		B 	 => '0',
+		X   => saidaprimeiromux
+	);
+-----------------------------------------------------------------------------
+	PIPE_depois_mux: flipflop1b PORT MAP(
+		clk => clk,
+		rst => rst,
+		D   => saidaprimeiromux,
+		Q   => saidaprimeiropipe
+	);	
+-----------------------------------------------------------------------------	
+	PIPE_depois_pipe1: flipflop1b PORT MAP(
+		clk => clk,
+		rst => rst,
+		D   => saidaprimeiropipe,
+		Q   => saidasegundopipe
+	);	
+-----------------------------------------------------------------------------
+	segundo_mux_depois_da_or: mux2to11bit  PORT MAP (
+		sel => saidaor,
+		A 	 => sig_fontePC,
+		B 	 => '0',
+		X   => sig_fontePC2 
+	);	
+-----------------------------------------------------------------------------
+	--sig_fontePC2 --recebe ultima saida do mux
+-----------------------------------------------------------------------------	
+	saidaor <= (saidaprimeiropipe or saidasegundopipe);
 -----------------------------------------------------------------------------	
 	PIPE_4_bit_sujo: flipflop1b PORT MAP (
 			clk => clk,
