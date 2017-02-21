@@ -12,7 +12,8 @@ ENTITY controller IS
 		RegDst, escMem, lerMem, DvC, memParaReg, escReg: out std_logic;
 		reg1,reg2,reg3 : in std_logic_vector(4 downto 0);
 		fontepc			: in std_logic;
-		adiantaA,adiantaB :out std_logic_vector(1 downto 0)
+		adiantaA,adiantaB :out std_logic_vector(1 downto 0);
+		dinamic_controle,dinamic_controle_1:out std_logic
 	);
 END controller;
 
