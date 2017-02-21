@@ -35,8 +35,12 @@ architecture rtl of MIPS is
 	signal sig_saida_bit_sujo1,sig_saida_bit_sujo2,sig_saida_bit_sujo3,saida_bit_sujo1,saida_bit_sujo2,saida_bit_sujo3 : std_logic; -- saidas dos pipes dos bitsujos
 	------------------------------------------------------------------------------------
 	signal saidaprimeiromux,saidasegundopipe,saidaprimeiropipe ,saidadoprimeiroreg ,saidaor: std_logic;
-	
-	
+	signal sig_imediate_extende2  : std_LOGIC_VECTOR(31 downto 0); -- extende o 2 , manda o sinal extendido 2 estagio.
+	signal sig_out_dinamic_control: std_LOGIC_VECTOR(31 downto 0); -- saida das decisoes jumps
+	signal dinamic_controle_1,dinamic_controle : std_logic;-- controla os dois mux do segundo estagio
+	signal sig_out_pulo2 : std_logic_vector(31 downto 0);
+	signal sig_out_dinamic_control_1 : std_LOGIC_VECTOR(31 downto 0);
+	signal sig_control_first_muxs :std_LOGIC; -- controla o problema se o beq pulou errado , la nos primeiros muxs 
 	component reg
 		generic(
 			DATA_WIDTH : natural := 8
@@ -159,7 +163,8 @@ architecture rtl of MIPS is
 		RegDst, escMem, lerMem, DvC, memParaReg, escReg: out std_logic;
 		reg1,reg2,reg3 : in std_logic_vector(4 downto 0);
 		fontepc			: in std_logic;
-		adiantaA,adiantaB :out std_logic_vector(1 downto 0)
+		adiantaA,adiantaB :out std_logic_vector(1 downto 0);
+		dinamic_controle,dinamic_controle_1:out std_logic
 	);
 	END component;
 	------------------------------------------------
@@ -212,16 +217,17 @@ begin
 	mux_IN_PC: mux2to1 GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
 		sel => sig_fontePC2,
 		A => sig_OUT_PCP4_1,
-		B => sig_OUT_jump_1,
+		B => sig_out_dinamic_control,
 		X => sig_in_PC
 	);
-	
+	-----------------------------------------------------
 	PCP4: addSub GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
 		a => sig_out_PC,
 		b => "00000000000000000000000000000100", -- 4
 		add_sub => '1',
 		result => sig_OUT_PCP4_1
 	);
+	-----------------------------------------------------
 	
 	memI: memInst2 PORT MAP (
 		address	 => sig_out_PC(11 downto 2),
@@ -273,7 +279,9 @@ begin
 		reg3    => sig_ReadReg2,-- registrador dado lido 2
 		fontepc => sig_fontePC2,
 		adiantaA => sig_adiantaA,
-		adiantaB => sig_adiantaB
+		adiantaB => sig_adiantaB,
+		dinamic_controle=>dinamic_controle,
+		dinamic_controle_1=>dinamic_controle_1
 	);
     
 	registradores: regbank PORT MAP (
@@ -294,6 +302,36 @@ begin
 	);
 												--sig_ulaFonte	RETIRADO
 	in_PIPE2 <= sig_ulaOp & sig_RegDST & sig_escMem & sig_lerMem & sig_DvC & sig_memParaReg & sig_escReg & sig_OUT_PCP4_2 & sig_dadoLido1 & sig_dadoLido2 & sig_imediate_ext & sig_ReadReg2 & sig_regDest;
+	-----------------------------------------------------------------------------
+	-- extender dois bits a esquerda a partir do fio , --sig_imediate_ext
+	-- declarado o sinal sig_imediate_extende2
+	sig_imediate_extende2 <= sig_imediate_ext_1(29 downto 0) & "00"; -- foi por extendido pra 32 bits o beq
+	-----------------------------------------------------------------------------
+	-- pegar endereço atual e somar com o 32 bits de beq
+	som_pulo_imediate: addSub GENERIC MAP (DATA_WIDTH => 32) PORT MAP ( -- soma endereco atual com o pulo do beq
+		a => sig_imediate_extende2,
+		b => sig_OUT_PCP4_2, -- 4
+		add_sub => '1',
+		result => sig_out_pulo2
+	);
+	-- fio sig_out_pulo2 entra no mux na entrada 1 , mux controlado por dinamic_controle
+	-- entrada 0 :sig_OUT_jump_1
+	-----------------------------------------------------------------------------
+	-- fio de saida mux antes do controle de jump:sig_out_dinamic_control
+	
+	mux_dinamic_controle_1 : mux2to1 GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
+		sel => dinamic_controle_1, 	  -- dinamic_controle 
+		A => sig_OUT_PCP4_2,		 	  -- pc + 4 
+		B => sig_out_pulo2,  -- o imediato extendido e com 2 bits a esquerda somado com +4 = pulo do beq imediato
+		X => sig_out_dinamic_control_1 -- fio de saida entra o saida + 4 
+	);
+	
+	mux_dinamic_controle_2 : mux2to1 GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
+		sel => dinamic_controle, 	  -- dinamic_controle 
+		A => sig_OUT_jump_1,		 	  -- saida do 4 estagio de calculo do pulo do beq
+		B => sig_out_dinamic_control_1,  -- o imediato extendido e com 2 bits a esquerda somado com +4 = pulo do beq imediato
+		X => sig_out_dinamic_control
+	);
 	
 	-----------------------------------------------------------------------------
 	in_PIPEAUX <= sig_adiantaA & sig_adiantaB;
@@ -384,10 +422,10 @@ begin
 		in0 => sig_IN1_ULA, --sig_dadoLido1_1, -- modificado para outro sinal , guardar sinal de saido do banco de register
 		in1 => sig_IN2_ULA,
 		oper => sig_operULA,
-		zero => sig_ULA_zero,
+		zero => sig_ULA_zero, -- 
 		output => sig_ULA_result
 	);
-
+	sig_control_first_muxs <= (sig_DvC_1 and (not (sig_ULA_zero)));
 	muxEscReg: mux2to1 GENERIC MAP (DATA_WIDTH => 5) PORT MAP (
 		sel => sig_RegDST_1,
 		A => sig_ReadReg2_1,
