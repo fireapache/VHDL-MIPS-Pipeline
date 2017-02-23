@@ -42,7 +42,7 @@ begin
 		mux1  : mux2to11bit  port map(fontepc,en0,fontepc,saida2);
 
 
-		process(opcode,sinal1,sinal2,sinal3,sinal4)
+		process(opcode,sinal1,sinal2,sinal3,sinal4,saida2)
 			begin
 			------------------------------------------------------
 			if(saida2 = '1')then -- desabilita hazard de controle
