@@ -89,7 +89,7 @@ begin
 	process(entradareg,clk)
 	begin
 	if(clk'event and clk='1')then
-		if(entradareg >="10001010" )then  
+		if(entradareg > "10000000" )then  
 			ehbeqadiantado <='1';
 		else
 			ehbeqadiantado <='0';
