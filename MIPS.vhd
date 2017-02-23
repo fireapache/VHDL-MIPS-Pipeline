@@ -352,13 +352,13 @@ begin
 		out32 => sig_imediate_ext
 	);
 	ehbeqadiantado <= sig_ehbeqadiantado_ponte;
-	sig_imediate_ext_1<=sig_imediate_ext;	--adiciona a referencia ao extensor
+	--sig_imediate_ext_1<=sig_imediate_ext;	--adiciona a referencia ao extensor
 	in_PIPE2 <= sig_ulaOp & sig_RegDST & sig_escMem & sig_lerMem & sig_DvC & sig_memParaReg & sig_escReg & sig_OUT_PCP4_2 & sig_dadoLido1 & sig_dadoLido2 & sig_imediate_ext & sig_ReadReg2 & sig_regDest;
 	in_PIPE_ehbeqadiantado <= sig_ehbeqadiantado_ponte;
 	-----------------------------------------------------------------------------
 	-- extender dois bits a esquerda a partir do fio , --sig_imediate_ext
 	-- declarado o sinal sig_imediate_extende2
-	sig_imediate_extende2 <= sig_imediate_ext_1(29 downto 0) & "00"; -- foi por extendido pra 32 bits o beq
+	sig_imediate_extende2 <= sig_imediate_ext(29 downto 0) & "00"; -- foi por extendido pra 32 bits o beq
 	-----------------------------------------------------------------------------
 	-- pegar endereço atual e somar com o 32 bits de beq
 	som_pulo_imediate: addSub GENERIC MAP (DATA_WIDTH => 32) PORT MAP ( -- soma endereco atual com o pulo do beq
