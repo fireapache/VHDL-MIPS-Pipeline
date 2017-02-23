@@ -15,6 +15,7 @@ end Tabela_de_Controle;
 architecture behavior of Tabela_de_Controle is
 signal saidasoma,entradareg, entradasoma0,entradasoma1 ,saidareg :std_logic_vector(7 downto 0); 
 signal temp1,temp2:std_logic;
+signal FontePc1 : std_logic;
 -------------------------------------------------------------------
 component mux2to1
 		generic(
@@ -59,21 +60,22 @@ component flipflop1b
 end component;
 ---------------------------------------------------------------------
 begin
+	FontePc1 <= FontePc;
 	flip1 : flipflop1b port map(clk,rst,DVC,temp1);
 	flip2 : flipflop1b port map(clk,rst,temp1,temp2);
 	entradasoma1(0)<=temp2;
 	-------------------------------------------------------------------------
 	mux_seta_primeiro_op: mux2to1 GENERIC MAP (DATA_WIDTH => 8) PORT MAP (
 		sel => rst,
-		A => "10000000",
-		B => saidareg,
+		A => saidareg,
+		B => "10000000",
 		X => entradasoma0
 	);
 	-------------------------------------------------------------------------
 	AJUSTA_ENDERECO_RECOVERY: addSub GENERIC MAP (DATA_WIDTH => 8) PORT MAP (
 		a => entradasoma0,
-		b => entradasoma1, -- DVC
-		add_sub => '1',
+		b => entradasoma1, 
+		add_sub => FontePc1, -- FontePc controla a soma ou sub com o DVC
 		result => entradareg
 	);
 	--------------------------------------------------------------------------
@@ -89,7 +91,7 @@ begin
 	if(clk'event and clk='1')then
 		if(entradareg >="10001010" )then  
 			ehbeqadiantado <='1';
-		elsif(entradareg <= "01110110" and entradareg = "10000000")then
+		else
 			ehbeqadiantado <='0';
 		end if;
 	end if;
