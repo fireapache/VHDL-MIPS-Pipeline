@@ -49,6 +49,7 @@ architecture rtl of MIPS is
 	-- VARIAVEIS QUE SAO PRE SOMA E POS SOMA
 	signal in_PIPE_ehbeqadiantado,in_PIPE_ehbeqadiantado2,sig_saida_ehbeqadiantado ,out_PIPE_ehbeq2,out_PIPE_ehbeq: std_logic; -- faz o sinal passar pelos pipe , em controlar o primeiro mux
 	signal ehbeqadiantado :std_logic;
+
 	component reg
 		generic(
 			DATA_WIDTH : natural := 8
@@ -59,6 +60,7 @@ architecture rtl of MIPS is
 			Q : out std_logic_vector ((DATA_WIDTH-1) downto 0)
 		); 
 	END component ;
+	
 	component mux2to11bit
 		Port (
 		SEL : in  STD_logic;
@@ -66,6 +68,7 @@ architecture rtl of MIPS is
 		X   : out STD_LOGIC
 	);
 	end component;
+	
 	component memInst
 		PORT(
 			address	: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
