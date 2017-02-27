@@ -20,9 +20,28 @@ entity comparador is
 	);
 	
 end comparador;
-
+	
 architecture behavior of comparador is 
-signal rs0,rs1 : std_logic_vector(4 downto 0);-- saidas dos flip flops
+signal rs0,rs1  : std_logic_vector(4 downto 0);-- saidas dos flip flops
+signal saida_mux :std_logic;
+------------------------------------------------
+component mux2to11bit
+		Port (
+		SEL : in  STD_logic;
+		A, B   : in  STD_logic;
+		X   : out STD_LOGIC
+	);
+end component;
+------------------------------------------------
+	component flipflop1b
+		port(
+		clk, rst : in std_logic;  
+		D : in  std_logic;  
+		Q : out std_logic
+	);
+	end component;
+------------------------------------------------
+	
 
 component flipflop
 	generic(
@@ -34,8 +53,9 @@ component flipflop
 		Q : out std_logic_vector ((DATA_WIDTH-1) downto 0)
 	);  
 end component;
-
-begin
+	
+begin -- rs0 -> rs1->
+	flip : flipflop1b port map(clk,rst,'1',saida_mux);
 	------------------------------------------------------------------
 			-- REGISTRADOR DE SINAIS SOURCE
 	Flip1: flipflop generic map(DATA_WIDTH => 5) PORT MAP(
@@ -51,37 +71,37 @@ begin
 		Q	 => rs1
 	);
 	-------------------------------------------------------------------
-	process(rs0,reg2)
+	process(rs0,reg2,saida_mux)
 		begin 
 		if(rs0=reg2)then
-			sinal1 <= '1';
+			sinal1 <= saida_mux;
 		else
 			sinal1 <= '0';
 		end if;
 	end process;
 	-------------------------------------------------------------------
-	process(rs0,reg3)
+	process(rs0,reg3,saida_mux)
 		begin 
 		if(rs0=reg3)then
-			sinal2 <= '1';
+			sinal2 <= saida_mux;
 		else
 			sinal2 <= '0';
 		end if;
 	end process;
 	-------------------------------------------------------------------
-	process(rs1,reg2)
+	process(rs1,reg2,saida_mux)
 		begin 
 		if(rs1=reg2)then
-			sinal3 <= '1';
+			sinal3 <= saida_mux;
 		else
 			sinal3 <= '0';
 		end if;
 	end process;
 	-------------------------------------------------------------------
-	process(rs1,reg3)
+	process(rs1,reg3,saida_mux)
 		begin 
 		if(rs1=reg3)then
-			sinal4 <= '1';
+			sinal4 <= saida_mux;
 		else
 			sinal4 <= '0';
 		end if;
