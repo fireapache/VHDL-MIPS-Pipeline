@@ -25,5 +25,17 @@ vcom -93 -work work {../../regBank.vhd}
 vcom -93 -work work {../../mux4to1.vhd}
 vcom -93 -work work {../../comparador.vhd}
 vcom -93 -work work {../../geradordesinais.vhd}
-
+vcom -93 -work work {../../flipflop1b.vhd}
+vcom -93 -work work {../../mux2to11bit.vhd}
+vcom -93 -work work {../../gerador_sinais_simples.vhd}
 vcom -93 -work work {MIPS.vht}
+
+
+
+vsim +altera -do MIPS_run_msim_rtl_vhdl.do -l msim_transcript -gui work.mips_vhd_tst
+ 
+do wave10.do
+
+run 11.63us
+
+wave zoom full
