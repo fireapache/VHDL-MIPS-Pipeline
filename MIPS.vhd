@@ -208,28 +208,82 @@ architecture rtl of MIPS is
 begin
 	
 	-- PRIMEIRO ESTÁGIO --
+	-----------------------------------------------------------------
+	sig_control_recovery_pc <= (sig_control_first_muxs  and sig_ehbeqadiantado);
+	-----------------------------------------------------------------
+	dinamic_controle_1 <= (ehbeqadiantado and sig_DvC);
+	-----------------------------------------------------------------
+	MUX_dinamic_controle_1 : mux2to1 GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
+		sel => dinamic_controle_1, 	  -- dinamic_controle 
+		A => sig_OUT_jump_1,		 	  -- jump_do_4 estagio , 
+		B => sig_out_pulo2,  -- o imediato extendido e com 2 bits a esquerda somado com +4 = pulo do beq imediato
+		X => sig_out_dinamic_control-- fio de saida entra o saida + 4 
+	);
+	-----------------------------------------------------------------
+	dinamic_controle   <= ((sig_fontePC and not(ehbeqadiantado)) or (dinamic_controle_1 ));
+	-----------------------------------------------------------------
+	MUX_CONTROLA_JUMP_OR_PC: mux2to1 GENERIC MAP (DATA_WIDTH => 32) PORT MAP (  --1
+		sel => dinamic_controle,
+		A => sig_OUT_PCP4_1, --sai do pc+4
+		B => sig_out_dinamic_control, -- Vem do segundo estagio do circuitos
+		X => sig_in_PC
+	);
+	-----------------------------------------------------
+	sig_control_recovery_pc <= (sig_control_first_muxs  and sig_ehbeqadiantado);
+	-----------------------------------------------------------------
+	MUX_CONTROLA_PC : mux2to1 GENERIC MAP (DATA_WIDTH => 32) PORT MAP ( --2 
+		sel => sig_control_recovery_pc , 	  
+		A =>  sig_in_PC, -- entra saida do multiplex, 		
+		B =>  sig_tratamento_recovery,  -- entra tratamento de beq mal sucedido
+		X =>  sig_in_PC_out -- entra do pc
+	);
+	------------------------------------------------------------------
 	
-	PC1: PC GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
+	
+	PC1: PC GENERIC MAP (DATA_WIDTH => 32) PORT MAP ( 
 		clk => clk,
 		rst => rst,
-		D => sig_in_PC,
+		D => sig_in_PC_out,--sig_in_PC,
 		Q => sig_out_PC
 	);
 	
-	mux_IN_PC: mux2to1 GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
-		sel => sig_fontePC, -- modificado
-		A => sig_OUT_PCP4_1,
-		B => sig_OUT_jump_1,
-		X => sig_in_PC
-	);
-	
+	------------------------------------------------------------------
 	PCP4: addSub GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
 		a => sig_out_PC,
 		b => "00000000000000000000000000000100", -- 4
 		add_sub => '1',
 		result => sig_OUT_PCP4_1
 	);
-	
+	------------------------------------------------------------------
+	PRIMEIRO_PIPE_recovery: flipflop GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
+		clk => clk,
+		rst => rst,
+		D => sig_out_PC,
+		Q => sig_out_recovery_1
+	);
+	-------------------------------------------------------------------
+	SEGUNDO_PIPE_recovery: flipflop GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
+		clk => clk,
+		rst => rst,
+		D => sig_out_recovery_1,
+		Q => sig_out_recovery_2
+	);
+	-------------------------------------------------------------------
+	MUX_DE_RECOVERY : mux2to1 GENERIC MAP (DATA_WIDTH => 32) PORT MAP ( --3
+		sel => sig_control_first_muxs , 	   
+		A =>  "00000000000000000000000000000000", -- entra saida do multiplex, 		
+		B => sig_out_recovery_2,  -- entra tratamento de beq mal sucedido
+		X => sig_tratamento_presoma -- saida entrada do pc
+	);
+	--------------------------------------------------------------------
+	AJUSTA_ENDERECO_RECOVERY: addSub GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
+		a => sig_tratamento_presoma,
+		b => "00000000000000000000000000000100", -- 4
+		add_sub => '1',
+		result => sig_tratamento_recovery
+	);
+	-----------------------------------------------------------------
+	------------------------------------------------------------------
 	memI: memInst2 PORT MAP (
 		address	 => sig_out_PC(11 downto 2),
 		clock	 => clk,
