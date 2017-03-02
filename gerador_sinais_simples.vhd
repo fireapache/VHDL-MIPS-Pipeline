@@ -40,7 +40,7 @@ begin
 								AdiantaB1<="11";
 				else
 							AdiantaA1<="00";
-							AdiantaB1<="11";
+							AdiantaB1<="00";
 				end if;
 			end process;
 end behavior;

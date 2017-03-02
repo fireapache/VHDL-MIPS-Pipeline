@@ -24,9 +24,9 @@ VVcXS2IUQB<hBh5oYmDh^e2
 !s100 4b<bIeoNdEPgF:jJTAVFi2
 Z9 OV;C;10.3d;59
 31
-Z10 !s110 1485299120
+Z10 !s110 1488434298
 !i10b 1
-Z11 !s108 1485299120.817411
+Z11 !s108 1488434298.503570
 Z12 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/addSub.vhd|
 Z13 !s107 /home/lucas/Downloads/Mips fisico/MIPS/addSub.vhd|
 !i113 1
@@ -68,7 +68,7 @@ R9
 31
 R10
 !i10b 1
-Z18 !s108 1485299120.693272
+Z18 !s108 1488434298.367121
 Z19 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/array32.vhd|
 Z20 !s107 /home/lucas/Downloads/Mips fisico/MIPS/array32.vhd|
 !i113 1
@@ -94,7 +94,7 @@ R14
 R15
 nbody
 Ecomparador
-Z22 w1484087194
+Z22 w1488072806
 Z23 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 R3
 R5
@@ -108,9 +108,9 @@ V=KZfIgTeckbE91WB4>2<P1
 !s100 5gn3VoNfOW[DAQLUWioTQ0
 R9
 31
-Z26 !s110 1485299121
+Z26 !s110 1488434299
 !i10b 1
-Z27 !s108 1485299121.614718
+Z27 !s108 1488434299.307311
 Z28 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/comparador.vhd|
 Z29 !s107 /home/lucas/Downloads/Mips fisico/MIPS/comparador.vhd|
 !i113 1
@@ -122,10 +122,10 @@ R3
 R5
 R6
 DEx4 work 10 comparador 0 22 =KZfIgTeckbE91WB4>2<P1
-l38
+l57
 L24
-Vm9mHCbi1z9mJG?`Vfzb>?1
-!s100 B2RM`ZkZY>VmhiC8AZUSR1
+V<GiI;E;A9ckBI3KJkcj5Y3
+!s100 H<dGCR9z:?WkXjOZbgC561
 R9
 31
 R26
@@ -136,26 +136,67 @@ R29
 !i113 1
 R14
 R15
+Econtrole_beq
+Z30 w1487850966
+R6
+R5
+R4
+R0
+Z31 8/home/lucas/Downloads/Mips fisico/MIPS/controle_beq.vhd
+Z32 F/home/lucas/Downloads/Mips fisico/MIPS/controle_beq.vhd
+l0
+L5
+V`WJaoE]W@PmDNOj3_oPh>2
+!s100 h61a6>_kMb__1Cn:aORbC0
+R9
+31
+R10
+!i10b 1
+Z33 !s108 1488434298.025432
+Z34 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/controle_beq.vhd|
+Z35 !s107 /home/lucas/Downloads/Mips fisico/MIPS/controle_beq.vhd|
+!i113 1
+R14
+R15
+Abehavior
+R6
+R5
+R4
+DEx4 work 12 controle_beq 0 22 `WJaoE]W@PmDNOj3_oPh>2
+l24
+L14
+VC@:=5j;;Ob5<oW<nZ6Sz:3
+!s100 CBnn:C<2iiK?0S;1Tb`X[1
+R9
+31
+R10
+!i10b 1
+R33
+R34
+R35
+!i113 1
+R14
+R15
 Econtroller
-Z30 w1484087091
+Z36 w1488379717
 R23
 R3
 R5
 R6
 R0
-Z31 8/home/lucas/Downloads/Mips fisico/MIPS/controller.vhd
-Z32 F/home/lucas/Downloads/Mips fisico/MIPS/controller.vhd
+Z37 8/home/lucas/Downloads/Mips fisico/MIPS/controller.vhd
+Z38 F/home/lucas/Downloads/Mips fisico/MIPS/controller.vhd
 l0
 L6
-VSZZY4eCOm@_EhAa]E]Mm11
-!s100 CO7o@:Wh`c3bEGjck<jN>2
+VX5loiElZjz7fG9TV>e6Ee3
+!s100 cEFR;hI6>CVk1ooZI1PcY0
 R9
 31
-R26
+R10
 !i10b 1
-Z33 !s108 1485299121.101507
-Z34 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/controller.vhd|
-Z35 !s107 /home/lucas/Downloads/Mips fisico/MIPS/controller.vhd|
+Z39 !s108 1488434298.791171
+Z40 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/controller.vhd|
+Z41 !s107 /home/lucas/Downloads/Mips fisico/MIPS/controller.vhd|
 !i113 1
 R14
 R15
@@ -164,28 +205,28 @@ R23
 R3
 R5
 R6
-DEx4 work 10 controller 0 22 SZZY4eCOm@_EhAa]E]Mm11
-l47
-L18
-VLk04z=fa]Ybol4=]7DTCg0
-!s100 B=3P9ICVNU=303]9Omo472
+DEx4 work 10 controller 0 22 X5loiElZjz7fG9TV>e6Ee3
+l75
+L20
+VSABZNcAXCXJ=<VcXRH;kV0
+!s100 6EM9:DQ=d_O_feaz1iXL_3
 R9
 31
-R26
+R10
 !i10b 1
-R33
-R34
-R35
+R39
+R40
+R41
 !i113 1
 R14
 R15
 Edec5to1
-Z36 w1477067774
+Z42 w1477067774
 R5
 R6
 R0
-Z37 8/home/lucas/Downloads/Mips fisico/MIPS/dec5p1.vhd
-Z38 F/home/lucas/Downloads/Mips fisico/MIPS/dec5p1.vhd
+Z43 8/home/lucas/Downloads/Mips fisico/MIPS/dec5p1.vhd
+Z44 F/home/lucas/Downloads/Mips fisico/MIPS/dec5p1.vhd
 l0
 L4
 VYbNLlNzIBH4Mi<f8LzJ7e1
@@ -194,9 +235,9 @@ R9
 31
 R10
 !i10b 1
-Z39 !s108 1485299120.621706
-Z40 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/dec5p1.vhd|
-Z41 !s107 /home/lucas/Downloads/Mips fisico/MIPS/dec5p1.vhd|
+Z45 !s108 1488434298.301263
+Z46 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/dec5p1.vhd|
+Z47 !s107 /home/lucas/Downloads/Mips fisico/MIPS/dec5p1.vhd|
 !i113 1
 R14
 R15
@@ -212,30 +253,30 @@ R9
 31
 R10
 !i10b 1
-R39
-R40
-R41
+R45
+R46
+R47
 !i113 1
 R14
 R15
 Eflipflop
-R36
+R42
 R5
 R6
 R0
-Z42 8/home/lucas/Downloads/Mips fisico/MIPS/flipflop.vhd
-Z43 F/home/lucas/Downloads/Mips fisico/MIPS/flipflop.vhd
+Z48 8/home/lucas/Downloads/Mips fisico/MIPS/flipflop.vhd
+Z49 F/home/lucas/Downloads/Mips fisico/MIPS/flipflop.vhd
 l0
 L4
 V?A[Fh>92J[aKOk0Bd_7K]3
 !s100 6MlNQZ:A[fhYcCOJBXcbi1
 R9
 31
-R26
+R10
 !i10b 1
-Z44 !s108 1485299121.180242
-Z45 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/flipflop.vhd|
-Z46 !s107 /home/lucas/Downloads/Mips fisico/MIPS/flipflop.vhd|
+Z50 !s108 1488434298.870719
+Z51 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/flipflop.vhd|
+Z52 !s107 /home/lucas/Downloads/Mips fisico/MIPS/flipflop.vhd|
 !i113 1
 R14
 R15
@@ -249,34 +290,73 @@ V7oUm^^mjFli4MYJi28`hz3
 !s100 XgP5SGQh6VSehmCoJ_]FP0
 R9
 31
-R26
+R10
 !i10b 1
-R44
-R45
-R46
+R50
+R51
+R52
 !i113 1
 R14
 R15
-Egeradordesinais
-Z47 w1484087605
+Eflipflop1b
+Z53 w1487002007
+R5
+R6
+R0
+Z54 8/home/lucas/Downloads/Mips fisico/MIPS/flipflop1b.vhd
+Z55 F/home/lucas/Downloads/Mips fisico/MIPS/flipflop1b.vhd
+l0
+L4
+VFhz81I=OXC[Il^E>a764C2
+!s100 BPBT>SYgf]`P]7F;10hBI0
+R9
+31
+R26
+!i10b 1
+Z56 !s108 1488434299.460422
+Z57 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/flipflop1b.vhd|
+Z58 !s107 /home/lucas/Downloads/Mips fisico/MIPS/flipflop1b.vhd|
+!i113 1
+R14
+R15
+Artl
+R5
+R6
+DEx4 work 10 flipflop1b 0 22 Fhz81I=OXC[Il^E>a764C2
+l14
+L12
+ViMKZj?IBEJ27]^ZoK2B_?1
+!s100 :35430Q:SX5PEcBl:Ka<=2
+R9
+31
+R26
+!i10b 1
+R56
+R57
+R58
+!i113 1
+R14
+R15
+Egerador_sinais_simples
+Z59 w1488327934
 R23
 R3
 R5
 R6
 R0
-Z48 8/home/lucas/Downloads/Mips fisico/MIPS/geradordesinais.vhd
-Z49 F/home/lucas/Downloads/Mips fisico/MIPS/geradordesinais.vhd
+Z60 8/home/lucas/Downloads/Mips fisico/MIPS/gerador_sinais_simples.vhd
+Z61 F/home/lucas/Downloads/Mips fisico/MIPS/gerador_sinais_simples.vhd
 l0
-L7
-VH>Fd5SWhW02QX0l__S1Em2
-!s100 IIMdH]ZWBnX7OIN[PH2YL0
+L6
+VK9I3YndZa9g>B:zOz4SE:2
+!s100 `ZPSjNQ6GGj8Y7oT70L:h2
 R9
 31
 R26
 !i10b 1
-Z50 !s108 1485299121.687245
-Z51 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/geradordesinais.vhd|
-Z52 !s107 /home/lucas/Downloads/Mips fisico/MIPS/geradordesinais.vhd|
+Z62 !s108 1488434299.588479
+Z63 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/gerador_sinais_simples.vhd|
+Z64 !s107 /home/lucas/Downloads/Mips fisico/MIPS/gerador_sinais_simples.vhd|
 !i113 1
 R14
 R15
@@ -285,28 +365,71 @@ R23
 R3
 R5
 R6
-DEx4 work 15 geradordesinais 0 22 H>Fd5SWhW02QX0l__S1Em2
-l20
-L18
-V78B7_;OVSnC[Cm<:@<5SP0
-!s100 z2QK`;<6;a@B@l8Ri3?h50
+DEx4 work 22 gerador_sinais_simples 0 22 K9I3YndZa9g>B:zOz4SE:2
+l13
+L12
+VZI;`H<nLM:Z14@<mQjhoP1
+!s100 GcF84^Tjbb1@LZT1fXb_^2
 R9
 31
 R26
 !i10b 1
-R50
-R51
-R52
+R62
+R63
+R64
+!i113 1
+R14
+R15
+Egeradordesinais
+Z65 w1488329388
+R23
+R3
+R5
+R6
+R0
+Z66 8/home/lucas/Downloads/Mips fisico/MIPS/geradordesinais.vhd
+Z67 F/home/lucas/Downloads/Mips fisico/MIPS/geradordesinais.vhd
+l0
+L7
+VITJaOYJYdd[d=5QUc8T<Q3
+!s100 HhBALDMWzW5n31Y5>SNRg2
+R9
+31
+R26
+!i10b 1
+Z68 !s108 1488434299.385806
+Z69 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/geradordesinais.vhd|
+Z70 !s107 /home/lucas/Downloads/Mips fisico/MIPS/geradordesinais.vhd|
+!i113 1
+R14
+R15
+Abehavior
+R23
+R3
+R5
+R6
+DEx4 work 15 geradordesinais 0 22 ITJaOYJYdd[d=5QUc8T<Q3
+l39
+L19
+V_6<mJa[AIZD1PjRL9^LM=3
+!s100 PGRe8QRb8A>M:O_5jJ_7U2
+R9
+31
+R26
+!i10b 1
+R68
+R69
+R70
 !i113 1
 R14
 R15
 Ememdata
-R36
+R42
 R5
 R6
 R0
-Z53 8/home/lucas/Downloads/Mips fisico/MIPS/memData.vhd
-Z54 F/home/lucas/Downloads/Mips fisico/MIPS/memData.vhd
+Z71 8/home/lucas/Downloads/Mips fisico/MIPS/memData.vhd
+Z72 F/home/lucas/Downloads/Mips fisico/MIPS/memData.vhd
 l0
 L42
 VU_9[cc_I[ebX:_^I?;Daf3
@@ -315,9 +438,9 @@ R9
 31
 R26
 !i10b 1
-Z55 !s108 1485299121.478564
-Z56 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/memData.vhd|
-Z57 !s107 /home/lucas/Downloads/Mips fisico/MIPS/memData.vhd|
+Z73 !s108 1488434299.176635
+Z74 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/memData.vhd|
+Z75 !s107 /home/lucas/Downloads/Mips fisico/MIPS/memData.vhd|
 !i113 1
 R14
 R15
@@ -333,20 +456,20 @@ R9
 31
 R26
 !i10b 1
-R55
-R56
-R57
+R73
+R74
+R75
 !i113 1
 R14
 R15
 Ememinst2
-Z58 w1485299065
+Z76 w1488434288
 R4
 R5
 R6
 R0
-Z59 8/home/lucas/Downloads/Mips fisico/MIPS/memInst2.vhd
-Z60 F/home/lucas/Downloads/Mips fisico/MIPS/memInst2.vhd
+Z77 8/home/lucas/Downloads/Mips fisico/MIPS/memInst2.vhd
+Z78 F/home/lucas/Downloads/Mips fisico/MIPS/memInst2.vhd
 l0
 L5
 VZ5G^DVC6OP@FNj1;R]8=[0
@@ -355,9 +478,9 @@ R9
 31
 R10
 !i10b 1
-Z61 !s108 1485299120.544689
-Z62 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/memInst2.vhd|
-Z63 !s107 /home/lucas/Downloads/Mips fisico/MIPS/memInst2.vhd|
+Z79 !s108 1488434298.173802
+Z80 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/memInst2.vhd|
+Z81 !s107 /home/lucas/Downloads/Mips fisico/MIPS/memInst2.vhd|
 !i113 1
 R14
 R15
@@ -368,26 +491,26 @@ R6
 DEx4 work 8 meminst2 0 22 Z5G^DVC6OP@FNj1;R]8=[0
 l22
 L18
-V??2F>Ao@7^Z1B`bYTW=PA0
-!s100 e^=e`<6boVIlTbIaCO<i20
+V_oLFeziDPN8KoIbD`En`W0
+!s100 6d71L2o]>Dz24WOaZnG[?0
 R9
 31
 R10
 !i10b 1
-R61
-R62
-R63
+R79
+R80
+R81
 !i113 1
 R14
 R15
 Emips
-Z64 w1484087133
+Z82 w1488433458
 R6
 R5
 R4
 R0
-Z65 8/home/lucas/Downloads/Mips fisico/MIPS/MIPS.vhd
-Z66 F/home/lucas/Downloads/Mips fisico/MIPS/MIPS.vhd
+Z83 8/home/lucas/Downloads/Mips fisico/MIPS/MIPS.vhd
+Z84 F/home/lucas/Downloads/Mips fisico/MIPS/MIPS.vhd
 l0
 L5
 VbYNDXaDY020QaZECbmHoX0
@@ -396,9 +519,9 @@ R9
 31
 R26
 !i10b 1
-Z67 !s108 1485299121.396781
-Z68 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/MIPS.vhd|
-Z69 !s107 /home/lucas/Downloads/Mips fisico/MIPS/MIPS.vhd|
+Z85 !s108 1488434299.087838
+Z86 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/MIPS.vhd|
+Z87 !s107 /home/lucas/Downloads/Mips fisico/MIPS/MIPS.vhd|
 !i113 1
 R14
 R15
@@ -407,27 +530,27 @@ R6
 R5
 R4
 DEx4 work 4 mips 0 22 bYNDXaDY020QaZECbmHoX0
-l181
+l229
 L12
-VQ:faeQ?HNoK0PV^1]hdmK0
-!s100 ]XiW[gm^dTc^?LgeVT]OU2
+VhifJkLaV_HC1kB1Po71GW3
+!s100 QNNzK[<ZRhGYgzmKTg>O72
 R9
 31
 R26
 !i10b 1
-R67
-R68
-R69
+R85
+R86
+R87
 !i113 1
 R14
 R15
 Emux2to1
-R36
+R42
 R5
 R6
 R0
-Z70 8/home/lucas/Downloads/Mips fisico/MIPS/mux2to1.vhd
-Z71 F/home/lucas/Downloads/Mips fisico/MIPS/mux2to1.vhd
+Z88 8/home/lucas/Downloads/Mips fisico/MIPS/mux2to1.vhd
+Z89 F/home/lucas/Downloads/Mips fisico/MIPS/mux2to1.vhd
 l0
 L4
 VmY=0e=kdE]8RBfUQXMdzE1
@@ -436,9 +559,9 @@ R9
 31
 R10
 !i10b 1
-Z72 !s108 1485299120.898182
-Z73 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/mux2to1.vhd|
-Z74 !s107 /home/lucas/Downloads/Mips fisico/MIPS/mux2to1.vhd|
+Z90 !s108 1488434298.584446
+Z91 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/mux2to1.vhd|
+Z92 !s107 /home/lucas/Downloads/Mips fisico/MIPS/mux2to1.vhd|
 !i113 1
 R14
 R15
@@ -454,20 +577,59 @@ R9
 31
 R10
 !i10b 1
-R72
-R73
-R74
+R90
+R91
+R92
+!i113 1
+R14
+R15
+Emux2to11bit
+Z93 w1487001851
+R5
+R6
+R0
+Z94 8/home/lucas/Downloads/Mips fisico/MIPS/mux2to11bit.vhd
+Z95 F/home/lucas/Downloads/Mips fisico/MIPS/mux2to11bit.vhd
+l0
+L4
+VzR4@YUGf9OmQYl9Z2VJU:0
+!s100 J0Tdl:;6D=je;c6fJQ6W40
+R9
+31
+R26
+!i10b 1
+Z96 !s108 1488434299.524968
+Z97 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/mux2to11bit.vhd|
+Z98 !s107 /home/lucas/Downloads/Mips fisico/MIPS/mux2to11bit.vhd|
+!i113 1
+R14
+R15
+Abehavioral
+R5
+R6
+DEx4 work 11 mux2to11bit 0 22 zR4@YUGf9OmQYl9Z2VJU:0
+l13
+L12
+V0ak[M38oQz1n;59JfSd?32
+!s100 ]]a0ekJG2;bUT?a_3o_bb0
+R9
+31
+R26
+!i10b 1
+R96
+R97
+R98
 !i113 1
 R14
 R15
 Emux32to1
-R36
+R42
 R21
 R5
 R6
 R0
-Z75 8/home/lucas/Downloads/Mips fisico/MIPS/mux32to1.vhd
-Z76 F/home/lucas/Downloads/Mips fisico/MIPS/mux32to1.vhd
+Z99 8/home/lucas/Downloads/Mips fisico/MIPS/mux32to1.vhd
+Z100 F/home/lucas/Downloads/Mips fisico/MIPS/mux32to1.vhd
 l0
 L5
 Vh:JL6?M2eRd<8E6cCI5KG1
@@ -476,9 +638,9 @@ R9
 31
 R26
 !i10b 1
-Z77 !s108 1485299121.763211
-Z78 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/mux32to1.vhd|
-Z79 !s107 /home/lucas/Downloads/Mips fisico/MIPS/mux32to1.vhd|
+Z101 !s108 1488434299.661332
+Z102 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/mux32to1.vhd|
+Z103 !s107 /home/lucas/Downloads/Mips fisico/MIPS/mux32to1.vhd|
 !i113 1
 R14
 R15
@@ -495,19 +657,19 @@ R9
 31
 R26
 !i10b 1
-R77
-R78
-R79
+R101
+R102
+R103
 !i113 1
 R14
 R15
 Emux4to1
-Z80 w1484775800
+Z104 w1484775800
 R5
 R6
 R0
-Z81 8/home/lucas/Downloads/Mips fisico/MIPS/mux4to1.vhd
-Z82 F/home/lucas/Downloads/Mips fisico/MIPS/mux4to1.vhd
+Z105 8/home/lucas/Downloads/Mips fisico/MIPS/mux4to1.vhd
+Z106 F/home/lucas/Downloads/Mips fisico/MIPS/mux4to1.vhd
 l0
 L4
 V?7aI_;7gQ3@=2?9N94lho3
@@ -516,9 +678,9 @@ R9
 31
 R26
 !i10b 1
-Z83 !s108 1485299121.546376
-Z84 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/mux4to1.vhd|
-Z85 !s107 /home/lucas/Downloads/Mips fisico/MIPS/mux4to1.vhd|
+Z107 !s108 1488434299.243734
+Z108 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/mux4to1.vhd|
+Z109 !s107 /home/lucas/Downloads/Mips fisico/MIPS/mux4to1.vhd|
 !i113 1
 R14
 R15
@@ -534,21 +696,21 @@ R9
 31
 R26
 !i10b 1
-R83
-R84
-R85
+R107
+R108
+R109
 !i113 1
 R14
 R15
 Eopula
-R36
+R42
 R23
 R3
 R5
 R6
 R0
-Z86 8/home/lucas/Downloads/Mips fisico/MIPS/opULA.vhd
-Z87 F/home/lucas/Downloads/Mips fisico/MIPS/opULA.vhd
+Z110 8/home/lucas/Downloads/Mips fisico/MIPS/opULA.vhd
+Z111 F/home/lucas/Downloads/Mips fisico/MIPS/opULA.vhd
 l0
 L6
 Vl_EJJ]dSmdzg6W98hSYjz2
@@ -557,9 +719,9 @@ R9
 31
 R26
 !i10b 1
-Z88 !s108 1485299121.326431
-Z89 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/opULA.vhd|
-Z90 !s107 /home/lucas/Downloads/Mips fisico/MIPS/opULA.vhd|
+Z112 !s108 1488434299.017051
+Z113 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/opULA.vhd|
+Z114 !s107 /home/lucas/Downloads/Mips fisico/MIPS/opULA.vhd|
 !i113 1
 R14
 R15
@@ -577,9 +739,9 @@ R9
 31
 R26
 !i10b 1
-R88
-R89
-R90
+R112
+R113
+R114
 !i113 1
 R14
 R15
@@ -588,8 +750,8 @@ R1
 R5
 R6
 R0
-Z91 8/home/lucas/Downloads/Mips fisico/MIPS/PC.vhd
-Z92 F/home/lucas/Downloads/Mips fisico/MIPS/PC.vhd
+Z115 8/home/lucas/Downloads/Mips fisico/MIPS/PC.vhd
+Z116 F/home/lucas/Downloads/Mips fisico/MIPS/PC.vhd
 l0
 L4
 V53NZo[>zF]6fmKJWeO1Tl2
@@ -598,9 +760,9 @@ R9
 31
 R10
 !i10b 1
-Z93 !s108 1485299120.963500
-Z94 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/PC.vhd|
-Z95 !s107 /home/lucas/Downloads/Mips fisico/MIPS/PC.vhd|
+Z117 !s108 1488434298.650534
+Z118 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/PC.vhd|
+Z119 !s107 /home/lucas/Downloads/Mips fisico/MIPS/PC.vhd|
 !i113 1
 R14
 R15
@@ -616,19 +778,19 @@ R9
 31
 R10
 !i10b 1
-R93
-R94
-R95
+R117
+R118
+R119
 !i113 1
 R14
 R15
 Ereg
-Z96 w1477067776
+Z120 w1477067776
 R5
 R6
 R0
-Z97 8/home/lucas/Downloads/Mips fisico/MIPS/reg.vhd
-Z98 F/home/lucas/Downloads/Mips fisico/MIPS/reg.vhd
+Z121 8/home/lucas/Downloads/Mips fisico/MIPS/reg.vhd
+Z122 F/home/lucas/Downloads/Mips fisico/MIPS/reg.vhd
 l0
 L4
 VEODmICoMUHLM5Z8a<z4Zb2
@@ -637,9 +799,9 @@ R9
 31
 R10
 !i10b 1
-Z99 !s108 1485299120.756110
-Z100 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/reg.vhd|
-Z101 !s107 /home/lucas/Downloads/Mips fisico/MIPS/reg.vhd|
+Z123 !s108 1488434298.437882
+Z124 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/reg.vhd|
+Z125 !s107 /home/lucas/Downloads/Mips fisico/MIPS/reg.vhd|
 !i113 1
 R14
 R15
@@ -655,22 +817,22 @@ R9
 31
 R10
 !i10b 1
-R99
-R100
-R101
+R123
+R124
+R125
 !i113 1
 R14
 R15
 Eregbank
-R96
+R120
 R21
 R3
 R23
 R5
 R6
 R0
-Z102 8/home/lucas/Downloads/Mips fisico/MIPS/regBank.vhd
-Z103 F/home/lucas/Downloads/Mips fisico/MIPS/regBank.vhd
+Z126 8/home/lucas/Downloads/Mips fisico/MIPS/regBank.vhd
+Z127 F/home/lucas/Downloads/Mips fisico/MIPS/regBank.vhd
 l0
 L7
 VL]b8@iBff^0aaVe7b``RC3
@@ -679,9 +841,9 @@ R9
 31
 R26
 !i10b 1
-Z104 !s108 1485299121.829732
-Z105 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/regBank.vhd|
-Z106 !s107 /home/lucas/Downloads/Mips fisico/MIPS/regBank.vhd|
+Z128 !s108 1488434299.725833
+Z129 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/regBank.vhd|
+Z130 !s107 /home/lucas/Downloads/Mips fisico/MIPS/regBank.vhd|
 !i113 1
 R14
 R15
@@ -700,31 +862,31 @@ R9
 31
 R26
 !i10b 1
-R104
-R105
-R106
+R128
+R129
+R130
 !i113 1
 R14
 R15
 Esignalextensor
-R96
+R120
 R6
 R5
 R4
 R0
-Z107 8/home/lucas/Downloads/Mips fisico/MIPS/signalExtensor.vhd
-Z108 F/home/lucas/Downloads/Mips fisico/MIPS/signalExtensor.vhd
+Z131 8/home/lucas/Downloads/Mips fisico/MIPS/signalExtensor.vhd
+Z132 F/home/lucas/Downloads/Mips fisico/MIPS/signalExtensor.vhd
 l0
 L5
 V>F=GSFMBLP6F<nWL=Dn1C0
 !s100 0_zPSTF:;97Dn:>6aOPch1
 R9
 31
-R26
+R10
 !i10b 1
-Z109 !s108 1485299121.028348
-Z110 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/signalExtensor.vhd|
-Z111 !s107 /home/lucas/Downloads/Mips fisico/MIPS/signalExtensor.vhd|
+Z133 !s108 1488434298.719950
+Z134 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/signalExtensor.vhd|
+Z135 !s107 /home/lucas/Downloads/Mips fisico/MIPS/signalExtensor.vhd|
 !i113 1
 R14
 R15
@@ -739,11 +901,54 @@ V4hX2]_05jnS];>bc]95i=1
 !s100 :Q9jIfNVlQc`nYc<Wz_BE0
 R9
 31
-R26
+R10
 !i10b 1
-R109
-R110
-R111
+R133
+R134
+R135
+!i113 1
+R14
+R15
+Etabela_de_controle
+Z136 w1488380865
+R23
+R3
+R5
+R6
+R0
+Z137 8/home/lucas/Downloads/Mips fisico/MIPS/Tabela_de_controle.vhd
+Z138 F/home/lucas/Downloads/Mips fisico/MIPS/Tabela_de_controle.vhd
+l0
+L6
+V^3E1`>aXPKL5R]6A?Ng9`3
+!s100 2FPUhTeb?T8hHIY^?g_7l0
+R9
+31
+R10
+!i10b 1
+Z139 !s108 1488434298.099091
+Z140 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/Tabela_de_controle.vhd|
+Z141 !s107 /home/lucas/Downloads/Mips fisico/MIPS/Tabela_de_controle.vhd|
+!i113 1
+R14
+R15
+Abehavior
+R23
+R3
+R5
+R6
+DEx4 work 18 tabela_de_controle 0 22 ^3E1`>aXPKL5R]6A?Ng9`3
+l62
+L15
+VBRnAgimI6D0ZmjN<b@g1S3
+!s100 Y_hn0=7X8QJZ;5]1hX`cN3
+R9
+31
+R10
+!i10b 1
+R139
+R140
+R141
 !i113 1
 R14
 R15
@@ -755,19 +960,19 @@ R23
 R5
 R6
 R0
-Z112 8/home/lucas/Downloads/Mips fisico/MIPS/ULA.vhd
-Z113 F/home/lucas/Downloads/Mips fisico/MIPS/ULA.vhd
+Z142 8/home/lucas/Downloads/Mips fisico/MIPS/ULA.vhd
+Z143 F/home/lucas/Downloads/Mips fisico/MIPS/ULA.vhd
 l0
 L6
 VddRGS3O]mR1VV_``68IBb1
 !s100 OkPEC3`=oBN5Im6V1Hb;T3
 R9
 31
-R26
+R10
 !i10b 1
-Z114 !s108 1485299121.245558
-Z115 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/ULA.vhd|
-Z116 !s107 /home/lucas/Downloads/Mips fisico/MIPS/ULA.vhd|
+Z144 !s108 1488434298.934403
+Z145 !s90 -reportprogress|300|-93|-work|work|/home/lucas/Downloads/Mips fisico/MIPS/ULA.vhd|
+Z146 !s107 /home/lucas/Downloads/Mips fisico/MIPS/ULA.vhd|
 !i113 1
 R14
 R15
@@ -784,11 +989,11 @@ V<k9SYio46H7]58]H;Pmb93
 !s100 TS78`_o[LdfEoUk]W8H=>2
 R9
 31
-R26
+R10
 !i10b 1
-R114
-R115
-R116
+R144
+R145
+R146
 !i113 1
 R14
 R15

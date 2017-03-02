@@ -51,12 +51,12 @@ BEGIN
 	);
 
 	rst <= 	'1',
-				'0' after 20 ns;
-	
+				'0' after 60.00 ns;
+
 	init : PROCESS                                    
 	BEGIN                                                        
-		clk <= '1', '0' AFTER 5 ns;
-		WAIT FOR 10 ns;                                                      
+		clk <= '1', '0' AFTER 15.00 ns;
+		WAIT FOR 30.00 ns;
 	END PROCESS init;
 	
 END MIPS_arch;

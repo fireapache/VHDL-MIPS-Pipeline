@@ -28,6 +28,8 @@ vcom -93 -work work {../../geradordesinais.vhd}
 vcom -93 -work work {../../flipflop1b.vhd}
 vcom -93 -work work {../../mux2to11bit.vhd}
 vcom -93 -work work {../../gerador_sinais_simples.vhd}
+vcom -93 -work work {../../controle_beq.vhd}
+vcom -93 -work work {../../Tabela_de_controle.vhd}
 vcom -93 -work work {MIPS.vht}
 
 
@@ -36,6 +38,6 @@ vsim +altera -do MIPS_run_msim_rtl_vhdl.do -l msim_transcript -gui work.mips_vhd
  
 do wave10.do
 
-run 11.63us
+run 15.42us
 
 wave zoom full

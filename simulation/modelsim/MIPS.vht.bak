@@ -29,39 +29,34 @@ USE ieee.std_logic_1164.all;
 
 ENTITY MIPS_vhd_tst IS
 END MIPS_vhd_tst;
+
 ARCHITECTURE MIPS_arch OF MIPS_vhd_tst IS
--- constants                                                 
--- signals                                                   
-SIGNAL clk : STD_LOGIC;
-SIGNAL outf : STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL rst : STD_LOGIC;
-COMPONENT MIPS
-	PORT (
-	clk : IN STD_LOGIC;
-	outf : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	rst : IN STD_LOGIC
-	);
-END COMPONENT;
+	-- constants                                                 
+	-- signals                                                   
+	SIGNAL clk : STD_LOGIC;
+	SIGNAL rst : STD_LOGIC;
+	
+	COMPONENT MIPS
+		PORT (
+			clk : IN STD_LOGIC;
+			rst : IN STD_LOGIC
+		);
+	END COMPONENT;
+	
 BEGIN
-	i1 : MIPS
-	PORT MAP (
--- list connections between master ports and signals
-	clk => clk,
-	outf => outf,
-	rst => rst
+	i1 : MIPS PORT MAP (
+		-- list connections between master ports and signals
+		clk => clk,
+		rst => rst
 	);
-init : PROCESS                                               
--- variable declarations                                     
-BEGIN                                                        
-        -- code that executes only once                      
-WAIT;                                                       
-END PROCESS init;                                           
-always : PROCESS                                              
--- optional sensitivity list                                  
--- (        )                                                 
--- variable declarations                                      
-BEGIN                                                         
-        -- code executes for every event on sensitivity list  
-WAIT;                                                        
-END PROCESS always;                                          
+
+	rst <= 	'1',
+				'0' after 120.00 ns;
+
+	init : PROCESS                                    
+	BEGIN                                                        
+		clk <= '1', '0' AFTER 30.00 ns;
+		WAIT FOR 60.00 ns;
+	END PROCESS init;
+	
 END MIPS_arch;
